@@ -14,6 +14,7 @@
 		D45850C11FB4DB3B00E80531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45850C01FB4DB3B00E80531 /* Assets.xcassets */; };
 		D45850C41FB4DB3B00E80531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45850C21FB4DB3B00E80531 /* LaunchScreen.storyboard */; };
 		D45850CE1FB4DB4600E80531 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45850CD1FB4DB4600E80531 /* CloudKit.framework */; };
+		EF348CC11FB4DEE5002F4563 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF348CC01FB4DEE5002F4563 /* model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		D45850C51FB4DB3B00E80531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45850CB1FB4DB4400E80531 /* ParkingApp2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ParkingApp2.entitlements; sourceTree = "<group>"; };
 		D45850CD1FB4DB4600E80531 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		EF348CC01FB4DEE5002F4563 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				D45850C21FB4DB3B00E80531 /* LaunchScreen.storyboard */,
 				D45850C51FB4DB3B00E80531 /* Info.plist */,
 				D45850BD1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld */,
+				EF348CC01FB4DEE5002F4563 /* model.swift */,
 			);
 			path = ParkingApp2;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				D45850B91FB4DB3B00E80531 /* ViewController.swift in Sources */,
 				D45850B71FB4DB3B00E80531 /* AppDelegate.swift in Sources */,
 				D45850BF1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld in Sources */,
+				EF348CC11FB4DEE5002F4563 /* model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
