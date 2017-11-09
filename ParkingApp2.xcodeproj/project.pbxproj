@@ -13,6 +13,7 @@
 		D45850BF1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D45850BD1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld */; };
 		D45850C11FB4DB3B00E80531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45850C01FB4DB3B00E80531 /* Assets.xcassets */; };
 		D45850C41FB4DB3B00E80531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45850C21FB4DB3B00E80531 /* LaunchScreen.storyboard */; };
+		D45850CE1FB4DB4600E80531 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45850CD1FB4DB4600E80531 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		D45850C01FB4DB3B00E80531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D45850C31FB4DB3B00E80531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D45850C51FB4DB3B00E80531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D45850CB1FB4DB4400E80531 /* ParkingApp2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ParkingApp2.entitlements; sourceTree = "<group>"; };
+		D45850CD1FB4DB4600E80531 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45850CE1FB4DB4600E80531 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +46,7 @@
 			children = (
 				D45850B51FB4DB3B00E80531 /* ParkingApp2 */,
 				D45850B41FB4DB3B00E80531 /* Products */,
+				D45850CC1FB4DB4600E80531 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +61,7 @@
 		D45850B51FB4DB3B00E80531 /* ParkingApp2 */ = {
 			isa = PBXGroup;
 			children = (
+				D45850CB1FB4DB4400E80531 /* ParkingApp2.entitlements */,
 				D45850B61FB4DB3B00E80531 /* AppDelegate.swift */,
 				D45850B81FB4DB3B00E80531 /* ViewController.swift */,
 				D45850BA1FB4DB3B00E80531 /* Main.storyboard */,
@@ -65,6 +71,14 @@
 				D45850BD1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld */,
 			);
 			path = ParkingApp2;
+			sourceTree = "<group>";
+		};
+		D45850CC1FB4DB4600E80531 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D45850CD1FB4DB4600E80531 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +114,14 @@
 					D45850B21FB4DB3B00E80531 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -278,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ParkingApp2/ParkingApp2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4FNJNUQ3AD;
 				INFOPLIST_FILE = ParkingApp2/Info.plist;
@@ -293,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ParkingApp2/ParkingApp2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4FNJNUQ3AD;
 				INFOPLIST_FILE = ParkingApp2/Info.plist;
