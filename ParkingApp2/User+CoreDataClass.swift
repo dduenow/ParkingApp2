@@ -7,10 +7,25 @@
 //
 //
 
-import Foundation
+import UIKit
 import CoreData
 
 @objc(User)
 public class User: NSManagedObject {
-
+    var parkingSpots: [ParkingSpot]? {
+        return rawParking?.array as? [ParkingSpot]
+    }
+    
+    convenience init?(userId: String?, username: String?){
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        
+        guard let context = appDelegate?.persistentContainer.viewContext else {
+            return nil
+        }
+        
+        self.init(entity: User.entity(), insertInto: context)
+        
+        self.userId = userId
+        self.username = username
+    }
 }
