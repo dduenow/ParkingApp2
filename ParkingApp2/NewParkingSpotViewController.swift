@@ -1,15 +1,20 @@
 //
-//  model.swift
+//  NewParkingSpotViewController.swift
 //  ParkingApp2
 //
-//  Created by Aidan Verhulst on 11/9/17.
+//  Created by David Duenow on 11/16/17.
 //  Copyright © 2017 David Duenow. All rights reserved.
 //
 
 import UIKit
 
-class model: UIViewController {
+class NewParkingSpotViewController: UIViewController {
 
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var 
+    
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

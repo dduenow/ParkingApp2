@@ -18,7 +18,7 @@
 		D45850C11FB4DB3B00E80531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45850C01FB4DB3B00E80531 /* Assets.xcassets */; };
 		D45850C41FB4DB3B00E80531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45850C21FB4DB3B00E80531 /* LaunchScreen.storyboard */; };
 		D45850CE1FB4DB4600E80531 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45850CD1FB4DB4600E80531 /* CloudKit.framework */; };
-		EF348CC11FB4DEE5002F4563 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF348CC01FB4DEE5002F4563 /* model.swift */; };
+		D47EF88F1FBE640900BD90D7 /* NewParkingSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47EF88E1FBE640900BD90D7 /* NewParkingSpotViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,7 @@
 		D45850C51FB4DB3B00E80531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45850CB1FB4DB4400E80531 /* ParkingApp2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ParkingApp2.entitlements; sourceTree = "<group>"; };
 		D45850CD1FB4DB4600E80531 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		EF348CC01FB4DEE5002F4563 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		D47EF88E1FBE640900BD90D7 /* NewParkingSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewParkingSpotViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +75,7 @@
 				D42961DF1FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift */,
 				D42961E01FB4E85B0032D322 /* User+CoreDataClass.swift */,
 				D42961E11FB4E85B0032D322 /* User+CoreDataProperties.swift */,
+				D47EF88E1FBE640900BD90D7 /* NewParkingSpotViewController.swift */,
 				D45850CB1FB4DB4400E80531 /* ParkingApp2.entitlements */,
 				D45850B61FB4DB3B00E80531 /* AppDelegate.swift */,
 				D45850B81FB4DB3B00E80531 /* ViewController.swift */,
@@ -83,7 +84,6 @@
 				D45850C21FB4DB3B00E80531 /* LaunchScreen.storyboard */,
 				D45850C51FB4DB3B00E80531 /* Info.plist */,
 				D45850BD1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld */,
-				EF348CC01FB4DEE5002F4563 /* model.swift */,
 			);
 			path = ParkingApp2;
 			sourceTree = "<group>";
@@ -176,13 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47EF88F1FBE640900BD90D7 /* NewParkingSpotViewController.swift in Sources */,
 				D45850B91FB4DB3B00E80531 /* ViewController.swift in Sources */,
 				D45850B71FB4DB3B00E80531 /* AppDelegate.swift in Sources */,
 				D42961E51FB4E85B0032D322 /* User+CoreDataProperties.swift in Sources */,
 				D42961E21FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift in Sources */,
 				D45850BF1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld in Sources */,
 				D42961E31FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift in Sources */,
-				EF348CC11FB4DEE5002F4563 /* model.swift in Sources */,
 				D42961E41FB4E85B0032D322 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
