@@ -48,14 +48,27 @@
                     <view key="view" contentMode="scaleToFill" id="DAN-5o-b2V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9XL-Xt-J66">
+                                <rect key="frame" x="0.0" y="50" width="375" height="568"/>
+                                <viewLayoutGuide key="safeArea" id="gGp-nm-nso"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9XL-Xt-J66" firstAttribute="leading" secondItem="ahI-iw-FqM" secondAttribute="leading" id="4fh-Hj-bbT"/>
+                            <constraint firstItem="ahI-iw-FqM" firstAttribute="bottom" secondItem="9XL-Xt-J66" secondAttribute="bottom" id="50H-on-i58"/>
+                            <constraint firstItem="9XL-Xt-J66" firstAttribute="top" secondItem="ahI-iw-FqM" secondAttribute="top" constant="30" id="DqK-SE-iXj"/>
+                            <constraint firstItem="ahI-iw-FqM" firstAttribute="bottom" secondItem="9XL-Xt-J66" secondAttribute="bottom" id="jSS-FX-I7k"/>
+                            <constraint firstItem="ahI-iw-FqM" firstAttribute="trailing" secondItem="9XL-Xt-J66" secondAttribute="trailing" id="ra6-KG-b7z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ahI-iw-FqM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="ol1-YF-8a4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEy-Dw-1PR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421" y="794"/>
+            <point key="canvasLocation" x="420" y="793.8530734632684"/>
         </scene>
         <!--Item-->
         <scene sceneID="XdD-9v-okE">
