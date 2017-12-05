@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="420" y="-25"/>
         </scene>
-        <!--Item 2-->
+        <!--Map-->
         <scene sceneID="tx0-UB-0np">
             <objects>
                 <viewController id="HLv-P4-70s" sceneMemberID="viewController">
@@ -35,13 +35,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="zaq-bK-qeI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="zPq-7j-LTX"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="zPq-7j-LTX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8a-Cd-UHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="421" y="1457"/>
         </scene>
-        <!--Item 1-->
+        <!--Dashboard-->
         <scene sceneID="hYi-cl-cxU">
             <objects>
                 <viewController id="Fvv-1X-DTV" sceneMemberID="viewController">
@@ -51,7 +51,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ahI-iw-FqM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="ol1-YF-8a4"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" id="ol1-YF-8a4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEy-Dw-1PR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
