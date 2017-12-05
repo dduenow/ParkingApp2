@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		447C58B61FD7368E00878DBC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C58B51FD7368E00878DBC /* TableViewController.swift */; };
 		44B009E31FB901A0000CC408 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B009E21FB901A0000CC408 /* LoginViewController.swift */; };
 		D42961E21FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42961DE1FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift */; };
 		D42961E31FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42961DF1FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		447C58B51FD7368E00878DBC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		44B009E21FB901A0000CC408 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D42961DE1FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParkingSpot+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D42961DF1FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParkingSpot+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				D45850B61FB4DB3B00E80531 /* AppDelegate.swift */,
 				D45850B81FB4DB3B00E80531 /* ViewController.swift */,
 				D45850BA1FB4DB3B00E80531 /* Main.storyboard */,
+				447C58B51FD7368E00878DBC /* TableViewController.swift */,
 				D45850C01FB4DB3B00E80531 /* Assets.xcassets */,
 				D45850C21FB4DB3B00E80531 /* LaunchScreen.storyboard */,
 				D45850C51FB4DB3B00E80531 /* Info.plist */,
@@ -182,6 +185,7 @@
 				D45850B91FB4DB3B00E80531 /* ViewController.swift in Sources */,
 				D45850B71FB4DB3B00E80531 /* AppDelegate.swift in Sources */,
 				D42961E51FB4E85B0032D322 /* User+CoreDataProperties.swift in Sources */,
+				447C58B61FD7368E00878DBC /* TableViewController.swift in Sources */,
 				D42961E21FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift in Sources */,
 				D45850BF1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld in Sources */,
 				D42961E31FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift in Sources */,
