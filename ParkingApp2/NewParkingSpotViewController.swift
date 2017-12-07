@@ -129,3 +129,12 @@ extension NewParkingSpotViewController: UITextFieldDelegate {
         return true
     }
 }
+
+
+
+//struct User {
+//    var id: String
+//}
+//
+//NSPredicate(format: "id == %@", "moorest@missouri.edu")
+
