@@ -13,13 +13,26 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
 
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var sizePickerView: UIPickerView!
     @IBOutlet weak var sizeTextField: UITextField!
+    @IBOutlet weak var priceTextField: UITextField!
     
     var user: User?
+    let sizePickerData = ["Car", "Truck", "SUV", "Jeep"]
+
+    let sizePickerView = UIPickerView()
+    let toolBar: UIToolbar = {
+        let bar = UIToolbar()
+        bar.barStyle = .default
+        bar.isTranslucent = true
+        bar.sizeToFit()
+        
+        bar.isUserInteractionEnabled = true
+        
+        return bar
+    }()
+    
     let publicDatabase = CKContainer.default().publicCloudDatabase
     let recordZone = CKRecordZone(zoneName: "ParkingZone")
-    let sizePickerData = ["Car", "Truck", "SUV", "Jeep"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +40,27 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         sizePickerView.delegate = self
         textField.delegate = self
         sizeTextField.delegate = self
-        sizePickerView.isHidden = true
+        priceTextField.delegate = self
         
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(NewParkingSpotViewController.resignKeyboard))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        toolBar.setItems([flexibleSpace, doneButton], animated: false)
+        
+        sizeTextField.inputView = sizePickerView
+        sizeTextField.inputAccessoryView = toolBar
+        sizeTextField.tintColor = .clear
     }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    
+    @objc func resignKeyboard() {
         textField.resignFirstResponder()
         sizeTextField.resignFirstResponder()
         sizePickerView.resignFirstResponder()
-        sizePickerView.isHidden = true
+        priceTextField.resignFirstResponder()
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        resignKeyboard()
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,13 +85,13 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         sizeTextField.text = sizePickerData[row]
     }
     
-    @IBAction func sizeTextFieldFocused(_ sender: UITextField) {
-        sizePickerView.isHidden = false
-    }
-    
-    @IBAction func sizeTextFieldUnfocused(_ sender: UITextField) {
-        sizePickerView.isHidden = true
-    }
+//    @IBAction func sizeTextFieldFocused(_ sender: UITextField) {
+//        sizePickerView.isHidden = false
+//    }
+//
+//    @IBAction func sizeTextFieldUnfocused(_ sender: UITextField) {
+//        sizePickerView.isHidden = true
+//    }
     
     @IBAction func saveSpot(_ sender: Any){
         let record = CKRecord(recordType: "Parking", zoneID: recordZone.zoneID)
@@ -95,14 +120,12 @@ extension NewParkingSpotViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         sizeTextField.resignFirstResponder()
+        priceTextField.resignFirstResponder()
         return true
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if(textField == sizeTextField){
-            sizePickerView.isHidden = false
-            return false
-        }
+        sizeTextField.text = sizePickerData.first
         return true
     }
 }

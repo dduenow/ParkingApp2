@@ -26,7 +26,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uvG-zg-iIK">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Description" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uvG-zg-iIK">
                                 <rect key="frame" x="0.0" y="84" width="375" height="45"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -48,18 +48,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVy-e8-uOg">
-                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
-                            </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Size Picker" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mak-jS-IhJ">
                                 <rect key="frame" x="16" y="257.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="sizeTextFieldFocused:" destination="fau-Mi-Th8" eventType="editingDidBegin" id="wDY-zt-wVS"/>
-                                    <action selector="sizeTextFieldUnfocused:" destination="fau-Mi-Th8" eventType="editingDidEnd" id="qLX-X1-dhm"/>
-                                </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bh4-a2-bnH">
                                 <rect key="frame" x="16" y="305.5" width="343" height="118"/>
@@ -120,7 +113,6 @@
                             <constraint firstItem="D43-DF-egh" firstAttribute="leading" secondItem="qRl-JL-N9u" secondAttribute="leading" constant="16" id="RbA-Uw-64q"/>
                             <constraint firstItem="qRl-JL-N9u" firstAttribute="trailing" secondItem="L4r-e7-14M" secondAttribute="trailing" constant="16" id="ReU-W7-dlI"/>
                             <constraint firstItem="4GK-vN-Fti" firstAttribute="leading" secondItem="qRl-JL-N9u" secondAttribute="leading" constant="16" id="TBD-4g-epW"/>
-                            <constraint firstItem="aVy-e8-uOg" firstAttribute="leading" secondItem="qRl-JL-N9u" secondAttribute="leading" id="XTM-zl-S2a"/>
                             <constraint firstItem="eZB-L9-vS5" firstAttribute="top" secondItem="KOC-3l-xzz" secondAttribute="bottom" constant="10" id="auE-03-9JT"/>
                             <constraint firstItem="qRl-JL-N9u" firstAttribute="trailing" secondItem="uvG-zg-iIK" secondAttribute="trailing" id="bXB-LN-1ce"/>
                             <constraint firstItem="W7Y-wn-pK5" firstAttribute="top" secondItem="qRl-JL-N9u" secondAttribute="top" id="epj-sz-Wrz"/>
@@ -133,18 +125,16 @@
                             <constraint firstItem="uvG-zg-iIK" firstAttribute="leading" secondItem="qRl-JL-N9u" secondAttribute="leading" id="qcn-Z1-WZz"/>
                             <constraint firstItem="qRl-JL-N9u" firstAttribute="trailing" secondItem="bh4-a2-bnH" secondAttribute="trailing" constant="16" id="s22-n0-o48"/>
                             <constraint firstItem="W7Y-wn-pK5" firstAttribute="top" secondItem="qRl-JL-N9u" secondAttribute="top" id="sNi-YD-cyf"/>
-                            <constraint firstItem="aVy-e8-uOg" firstAttribute="trailing" secondItem="qRl-JL-N9u" secondAttribute="trailing" id="ubn-pH-uED"/>
                             <constraint firstItem="mak-jS-IhJ" firstAttribute="top" secondItem="L4r-e7-14M" secondAttribute="bottom" constant="10" id="vJz-0m-ZWY"/>
                             <constraint firstItem="KOC-3l-xzz" firstAttribute="top" secondItem="uvG-zg-iIK" secondAttribute="bottom" constant="20" id="x3D-M6-Txr"/>
                             <constraint firstItem="qRl-JL-N9u" firstAttribute="trailing" secondItem="W7Y-wn-pK5" secondAttribute="trailing" id="xhp-FG-hqs"/>
                             <constraint firstItem="bh4-a2-bnH" firstAttribute="top" secondItem="mak-jS-IhJ" secondAttribute="bottom" constant="18" id="ymk-4W-9pY"/>
                             <constraint firstItem="mak-jS-IhJ" firstAttribute="leading" secondItem="qRl-JL-N9u" secondAttribute="leading" constant="16" id="yvi-sb-Myt"/>
-                            <constraint firstItem="qRl-JL-N9u" firstAttribute="bottom" secondItem="aVy-e8-uOg" secondAttribute="bottom" id="zr3-sm-ncP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qRl-JL-N9u"/>
                     </view>
                     <connections>
-                        <outlet property="sizePickerView" destination="aVy-e8-uOg" id="taq-x9-4wh"/>
+                        <outlet property="priceTextField" destination="L4r-e7-14M" id="jkd-IY-XgK"/>
                         <outlet property="sizeTextField" destination="mak-jS-IhJ" id="qVj-jJ-PYZ"/>
                         <outlet property="textField" destination="uvG-zg-iIK" id="z65-r2-zT1"/>
                     </connections>
