@@ -2,89 +2,99 @@
 //  MapViewController.swift
 //  ParkingApp2
 //
-//  Created by Aidan Verhulst on 11/30/17.
+//  Created by Aidan Verhulst on 12/6/17.
 //  Copyright © 2017 David Duenow. All rights reserved.
 //
 
 import UIKit
 import MapKit
 
-
-class MapViewController: UIViewController {
-
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    let annotationIdentifier = "spot"
+    var selectedAnnotation: SpotPointAnnotation?
     
+    let centerLatitude = 40.00
+    let centerLongitude = -90.00
+    //these two decide how much of the map you can view.
+    let latitudeDelta = 0.01
+    let longitudeDelta = 0.01
+    
+    //using array of spots, which is a test class, to test out MKpoints
+    var spots: [Spot] = [
+        Spot(latitude: 38.946336, longitude: -92.330565,
+                 title: "Test1", subtitle: "University of Missouri",
+                 price: 1.00),
+        Spot(latitude: 38.945176, longitude: -92.328838,
+                 title: "T2", subtitle: "University of Missouri",
+                 price: 1.00),
+        Spot(latitude: 38.947889, longitude: -92.329506,
+                 title: "T3", subtitle: "University of Missouri",
+                 price: 1.00),
+        Spot(latitude: 38.948689, longitude: -92.327841,
+                 title: "T4", subtitle: "Columbia, MO",
+                 price: 1.00),
+        Spot(latitude: 38.950132, longitude: -92.332251,
+                 title: "T5", subtitle: "Columbia, Missouri",
+                 price: 1.00)
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let initialLocation = CLLocation(latitude: 38.942491, longitude: -92.326973)
-        
-        //calls function below
-        centerMapOnLocation(location: initialLocation)
-        
-        //sets ViewController as the delegate of mapView
+        //
         mapView.delegate = self
-    }
-
-    //sets north/south and east/west span to 1000 meters
-    let regionRadius: CLLocationDistance = 1000
-    //location is center point. setRegion tells mapView to display the region. animated adds a zoom effect
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-                                                                  regionRadius, regionRadius)
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
-}
-    
-
-
-
-
-    extension MapViewController: MKMapViewDelegate {
-        // 1 - gets called at every annotation added to the map
-        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-            // 2 - check to make sure that thea annotation is an Artwork annotation - returns nil if not
-//            guard let annotation = annotation as? Artwork else { return nil }
-            // 3 - makes each view an MKMarkerAnnotationView in order to make markers pop up
-            let identifier = "marker"
-            var view: MKMarkerAnnotationView
-            // 4 - check to see if reusable annotation view is available before adding a new one
-            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-                as? MKMarkerAnnotationView {
-                dequeuedView.annotation = annotation
-                view = dequeuedView
-            } else {
-                // 5 - Creates a new MKMarkerAnnotationView object
-                view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: -5, y: 5)
-                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-            }
-            return view
-            
+        
+        let centerLocation = spots[0]
+        
+        let center = CLLocationCoordinate2D(latitude: centerLocation.latitude, longitude: centerLocation.longitude)
+        let span = MKCoordinateSpan(latitudeDelta: latitudeDelta, longitudeDelta: longitudeDelta)
+        let region = MKCoordinateRegion(center: center, span: span)
+        
+        mapView.setRegion(region, animated: true)
+        
+        for spot in spots {
+            let point = SpotPointAnnotation()
+            point.spot = spot
+            point.coordinate = CLLocationCoordinate2D(latitude: spot.latitude, longitude: spot.longitude)
+            point.title = spot.title
+            point.subtitle = spot.subtitle
+            mapView.addAnnotation(point)
         }
-        //tells MapKit what to do when the user hits the callout button
-//        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
-//                     calloutAccessoryControlTapped control: UIControl) {
-////            let location = view.annotation as! Artwork
-//            let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-//            location.mapItem().openInMaps(launchOptions: launchOptions)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        var view = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
+        if view == nil {
+            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+            view?.canShowCallout = true
+            view?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        } else {
+            view?.annotation = annotation
+        }
+        return view
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.rightCalloutAccessoryView {
+            selectedAnnotation = view.annotation as? SpotPointAnnotation
+            performSegue(withIdentifier: "showDetail", sender: self)
+        }
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? DetailViewController, let annotation = selectedAnnotation, let location = annotation.location {
+//            destination.location = location
 //        }
-    }
     
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
+}

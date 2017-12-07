@@ -2,22 +2,20 @@
 //  ParkingSpot+CoreDataProperties.swift
 //  ParkingApp2
 //
-//  Created by David Duenow on 11/9/17.
+//  Created by David Duenow on 11/16/17.
 //  Copyright © 2017 David Duenow. All rights reserved.
 //
 //
-
 import Foundation
 import CoreData
-import MapKit
 
-extension ParkingSpot: NSObject, MKAnnotation {
+
+extension ParkingSpot {
     
-
     @nonobjc public class func fetchRequest() -> NSFetchRequest<ParkingSpot> {
         return NSFetchRequest<ParkingSpot>(entityName: "ParkingSpot")
     }
-
+    
     @NSManaged public var dateAvailability: NSDate?
     @NSManaged public var ownerUserId: String?
     @NSManaged public var parkingInformation: String?
@@ -26,5 +24,6 @@ extension ParkingSpot: NSObject, MKAnnotation {
     @NSManaged public var renterUserId: String?
     @NSManaged public var spotsAvailable: Int16
     @NSManaged public var timeAvailability: String?
-
+    @NSManaged public var user: User?
+    
 }

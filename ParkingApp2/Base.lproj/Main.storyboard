@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ffn-2u-eSf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ffn-2u-eSf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -73,53 +73,53 @@
             </objects>
             <point key="canvasLocation" x="-586" y="2017"/>
         </scene>
-        <!--Item 2-->
+        <!--Map-->
         <scene sceneID="tx0-UB-0np">
             <objects>
-                <viewController id="HLv-P4-70s" sceneMemberID="viewController">
+                <viewController id="HLv-P4-70s" customClass="MapViewController" customModule="ParkingApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yjn-Q1-P1p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2Di-xR-yqj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zaq-bK-qeI" firstAttribute="bottom" secondItem="2Di-xR-yqj" secondAttribute="bottom" id="01a-FV-lHf"/>
+                            <constraint firstItem="zaq-bK-qeI" firstAttribute="trailing" secondItem="2Di-xR-yqj" secondAttribute="trailing" id="EDL-sI-Ev7"/>
+                            <constraint firstItem="2Di-xR-yqj" firstAttribute="leading" secondItem="zaq-bK-qeI" secondAttribute="leading" id="TZz-0f-Yxb"/>
+                            <constraint firstItem="2Di-xR-yqj" firstAttribute="top" secondItem="zaq-bK-qeI" secondAttribute="top" id="Vem-kN-21q"/>
+                            <constraint firstItem="2Di-xR-yqj" firstAttribute="top" secondItem="zaq-bK-qeI" secondAttribute="top" id="XKi-BL-Z2A"/>
+                            <constraint firstItem="zaq-bK-qeI" firstAttribute="bottom" secondItem="2Di-xR-yqj" secondAttribute="bottom" id="a1S-DE-biO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zaq-bK-qeI"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="zPq-7j-LTX"/>
+                    <connections>
+                        <outlet property="mapView" destination="2Di-xR-yqj" id="IfR-Ml-FNd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8a-Cd-UHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421" y="1457"/>
+            <point key="canvasLocation" x="420" y="1456.8215892053975"/>
         </scene>
-        <!--Dashboard-->
+        <!--Item 1-->
         <scene sceneID="hYi-cl-cxU">
             <objects>
                 <viewController id="Fvv-1X-DTV" customClass="MapViewController" customModule="ParkingApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DAN-5o-b2V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pQs-Qf-Zcj">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="pQs-Qf-Zcj" firstAttribute="top" secondItem="ahI-iw-FqM" secondAttribute="top" id="9IH-Z5-Fvo"/>
-                            <constraint firstItem="ahI-iw-FqM" firstAttribute="trailing" secondItem="pQs-Qf-Zcj" secondAttribute="trailing" id="NZi-Hz-LOJ"/>
-                            <constraint firstItem="pQs-Qf-Zcj" firstAttribute="top" secondItem="ahI-iw-FqM" secondAttribute="top" id="g1m-LH-Mh9"/>
-                            <constraint firstItem="pQs-Qf-Zcj" firstAttribute="leading" secondItem="ahI-iw-FqM" secondAttribute="leading" id="qbu-v0-gCb"/>
-                            <constraint firstItem="ahI-iw-FqM" firstAttribute="bottom" secondItem="pQs-Qf-Zcj" secondAttribute="bottom" id="s83-4h-yCU"/>
-                            <constraint firstItem="ahI-iw-FqM" firstAttribute="bottom" secondItem="pQs-Qf-Zcj" secondAttribute="bottom" id="u7L-63-f4V"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ahI-iw-FqM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="ol1-YF-8a4"/>
-                    <connections>
-                        <outlet property="mapView" destination="pQs-Qf-Zcj" id="Wop-C2-okT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEy-Dw-1PR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="420" y="793.8530734632684"/>
+            <point key="canvasLocation" x="313" y="724"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L81-H5-8Mp">

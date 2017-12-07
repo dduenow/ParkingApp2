@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		447C58B61FD7368E00878DBC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C58B51FD7368E00878DBC /* TableViewController.swift */; };
-		44B009E31FB901A0000CC408 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B009E21FB901A0000CC408 /* LoginViewController.swift */; };
 		D42961E21FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42961DE1FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift */; };
 		D42961E31FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42961DF1FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift */; };
 		D42961E41FB4E85B0032D322 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42961E01FB4E85B0032D322 /* User+CoreDataClass.swift */; };
@@ -20,13 +18,12 @@
 		D45850C11FB4DB3B00E80531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45850C01FB4DB3B00E80531 /* Assets.xcassets */; };
 		D45850C41FB4DB3B00E80531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45850C21FB4DB3B00E80531 /* LaunchScreen.storyboard */; };
 		D45850CE1FB4DB4600E80531 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45850CD1FB4DB4600E80531 /* CloudKit.framework */; };
-		EF348CC11FB4DEE5002F4563 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF348CC01FB4DEE5002F4563 /* model.swift */; };
-		EF4F9EC51FD096D200DE4627 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F9EC41FD096D200DE4627 /* MapViewController.swift */; };
+		EF6EB0BD1FD8F1E40080CDCD /* ParkingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EB0BC1FD8F1E40080CDCD /* ParkingSpot.swift */; };
+		EF6EB0C11FD8F7B10080CDCD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EB0C01FD8F7B10080CDCD /* MapViewController.swift */; };
+		EF6EB0C31FD8FEBB0080CDCD /* SpotPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EB0C21FD8FEBB0080CDCD /* SpotPointAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		447C58B51FD7368E00878DBC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		44B009E21FB901A0000CC408 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D42961DE1FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParkingSpot+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D42961DF1FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParkingSpot+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D42961E01FB4E85B0032D322 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -41,8 +38,9 @@
 		D45850C51FB4DB3B00E80531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45850CB1FB4DB4400E80531 /* ParkingApp2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ParkingApp2.entitlements; sourceTree = "<group>"; };
 		D45850CD1FB4DB4600E80531 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		EF348CC01FB4DEE5002F4563 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
-		EF4F9EC41FD096D200DE4627 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EF6EB0BC1FD8F1E40080CDCD /* ParkingSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSpot.swift; sourceTree = "<group>"; };
+		EF6EB0C01FD8F7B10080CDCD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EF6EB0C21FD8FEBB0080CDCD /* SpotPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotPointAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +83,13 @@
 				D45850B61FB4DB3B00E80531 /* AppDelegate.swift */,
 				D45850B81FB4DB3B00E80531 /* ViewController.swift */,
 				D45850BA1FB4DB3B00E80531 /* Main.storyboard */,
-				EF4F9EC41FD096D200DE4627 /* MapViewController.swift */,
+				EF6EB0BC1FD8F1E40080CDCD /* ParkingSpot.swift */,
 				D45850C01FB4DB3B00E80531 /* Assets.xcassets */,
 				D45850C21FB4DB3B00E80531 /* LaunchScreen.storyboard */,
 				D45850C51FB4DB3B00E80531 /* Info.plist */,
 				D45850BD1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld */,
-				EF348CC01FB4DEE5002F4563 /* model.swift */,
+				EF6EB0C01FD8F7B10080CDCD /* MapViewController.swift */,
+				EF6EB0C21FD8FEBB0080CDCD /* SpotPointAnnotation.swift */,
 			);
 			path = ParkingApp2;
 			sourceTree = "<group>";
@@ -186,11 +185,12 @@
 				D45850B91FB4DB3B00E80531 /* ViewController.swift in Sources */,
 				D45850B71FB4DB3B00E80531 /* AppDelegate.swift in Sources */,
 				D42961E51FB4E85B0032D322 /* User+CoreDataProperties.swift in Sources */,
-				EF4F9EC51FD096D200DE4627 /* MapViewController.swift in Sources */,
+				EF6EB0C31FD8FEBB0080CDCD /* SpotPointAnnotation.swift in Sources */,
+				EF6EB0C11FD8F7B10080CDCD /* MapViewController.swift in Sources */,
 				D42961E21FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift in Sources */,
 				D45850BF1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld in Sources */,
 				D42961E31FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift in Sources */,
-				EF348CC11FB4DEE5002F4563 /* model.swift in Sources */,
+				EF6EB0BD1FD8F1E40080CDCD /* ParkingSpot.swift in Sources */,
 				D42961E41FB4E85B0032D322 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
