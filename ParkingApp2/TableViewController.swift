@@ -11,7 +11,7 @@ import UIKit
 class TableViewController: UITableViewController {
 
     @IBOutlet var listingsTableView: UITableView!
-    
+       
     //testing table view
     var names = ["Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan"]
     
