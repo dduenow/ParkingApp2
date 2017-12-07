@@ -9,9 +9,10 @@
 
 import Foundation
 import CoreData
+import MapKit
 
-
-extension ParkingSpot {
+extension ParkingSpot: NSObject, MKAnnotation {
+    
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<ParkingSpot> {
         return NSFetchRequest<ParkingSpot>(entityName: "ParkingSpot")

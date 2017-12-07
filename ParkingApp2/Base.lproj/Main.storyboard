@@ -44,27 +44,30 @@
         <!--Item 1-->
         <scene sceneID="hYi-cl-cxU">
             <objects>
-                <viewController id="Fvv-1X-DTV" sceneMemberID="viewController">
+                <viewController id="Fvv-1X-DTV" customClass="MapViewController" customModule="ParkingApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DAN-5o-b2V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9XL-Xt-J66">
-                                <rect key="frame" x="0.0" y="50" width="375" height="568"/>
-                                <viewLayoutGuide key="safeArea" id="gGp-nm-nso"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pQs-Qf-Zcj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9XL-Xt-J66" firstAttribute="leading" secondItem="ahI-iw-FqM" secondAttribute="leading" id="4fh-Hj-bbT"/>
-                            <constraint firstItem="ahI-iw-FqM" firstAttribute="bottom" secondItem="9XL-Xt-J66" secondAttribute="bottom" id="50H-on-i58"/>
-                            <constraint firstItem="9XL-Xt-J66" firstAttribute="top" secondItem="ahI-iw-FqM" secondAttribute="top" constant="30" id="DqK-SE-iXj"/>
-                            <constraint firstItem="ahI-iw-FqM" firstAttribute="bottom" secondItem="9XL-Xt-J66" secondAttribute="bottom" id="jSS-FX-I7k"/>
-                            <constraint firstItem="ahI-iw-FqM" firstAttribute="trailing" secondItem="9XL-Xt-J66" secondAttribute="trailing" id="ra6-KG-b7z"/>
+                            <constraint firstItem="pQs-Qf-Zcj" firstAttribute="top" secondItem="ahI-iw-FqM" secondAttribute="top" id="9IH-Z5-Fvo"/>
+                            <constraint firstItem="ahI-iw-FqM" firstAttribute="trailing" secondItem="pQs-Qf-Zcj" secondAttribute="trailing" id="NZi-Hz-LOJ"/>
+                            <constraint firstItem="pQs-Qf-Zcj" firstAttribute="top" secondItem="ahI-iw-FqM" secondAttribute="top" id="g1m-LH-Mh9"/>
+                            <constraint firstItem="pQs-Qf-Zcj" firstAttribute="leading" secondItem="ahI-iw-FqM" secondAttribute="leading" id="qbu-v0-gCb"/>
+                            <constraint firstItem="ahI-iw-FqM" firstAttribute="bottom" secondItem="pQs-Qf-Zcj" secondAttribute="bottom" id="s83-4h-yCU"/>
+                            <constraint firstItem="ahI-iw-FqM" firstAttribute="bottom" secondItem="pQs-Qf-Zcj" secondAttribute="bottom" id="u7L-63-f4V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ahI-iw-FqM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="ol1-YF-8a4"/>
+                    <connections>
+                        <outlet property="mapView" destination="pQs-Qf-Zcj" id="Wop-C2-okT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEy-Dw-1PR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
