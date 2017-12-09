@@ -14,5 +14,8 @@ struct Spot {
     let title: String
     let subtitle: String
     let price: Double
-    
+    let size: String
+    let detail: String
+//    let beginDate: Date
+//    let endDate: Date
 }

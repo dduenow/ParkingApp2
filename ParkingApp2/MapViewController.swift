@@ -26,19 +26,19 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var spots: [Spot] = [
         Spot(latitude: 38.946336, longitude: -92.330565,
                  title: "Test1", subtitle: "University of Missouri",
-                 price: 1.00),
+                 price: 1.00, size: "Two normal vehicles", detail: "normal spot that can fit two vehicles"),
         Spot(latitude: 38.945176, longitude: -92.328838,
                  title: "T2", subtitle: "University of Missouri",
-                 price: 1.00),
+                 price: 1.00, size: "One spaceship", detail: "parking spot available for one spaceship"),
         Spot(latitude: 38.947889, longitude: -92.329506,
                  title: "T3", subtitle: "University of Missouri",
-                 price: 1.00),
+                 price: 1.00, size: "1 vehicle", detail: "extra spot available at my house"),
         Spot(latitude: 38.948689, longitude: -92.327841,
                  title: "T4", subtitle: "Columbia, MO",
-                 price: 1.00),
+                 price: 1.00, size: "up to a large truck", detail: "enough room for a large vehicle"),
         Spot(latitude: 38.950132, longitude: -92.332251,
                  title: "T5", subtitle: "Columbia, Missouri",
-                 price: 1.00)
+                 price: 1.00, size: "one limo", detail: "got a spot for a limo here")
     ]
 
     override func viewDidLoad() {
@@ -89,11 +89,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destination = segue.destination as? DetailViewController, let annotation = selectedAnnotation, let location = annotation.location {
-//            destination.location = location
-//        }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailViewController, let annotation = selectedAnnotation, let spot = annotation.spot {
+            destination.spot = spot
+        }
+    }
 
     
 
