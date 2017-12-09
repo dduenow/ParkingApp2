@@ -13,10 +13,15 @@ class TableViewController: UITableViewController {
     @IBOutlet var listingsTableView: UITableView!
     
     //testing table view
-    var names = ["Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan","Bob", "Joe", "Evan"]
+    var names = ["Hitt Street", "Turner Avenue", "Rollins", "Parking garage #7"]
+    
+    //var listings = 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        self.title = nil;
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

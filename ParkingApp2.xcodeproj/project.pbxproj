@@ -84,6 +84,7 @@
 				D45850CB1FB4DB4400E80531 /* ParkingApp2.entitlements */,
 				D45850B61FB4DB3B00E80531 /* AppDelegate.swift */,
 				D45850B81FB4DB3B00E80531 /* ViewController.swift */,
+				44C123A41FD9D9D5007E0759 /* ListingViewController.swift */,
 				D45850BA1FB4DB3B00E80531 /* Main.storyboard */,
 				447C58B51FD7368E00878DBC /* TableViewController.swift */,
 				46424E8C1FD9C4D10065809C /* dashViewController.swift */,
@@ -194,6 +195,7 @@
 				D42961E31FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift in Sources */,
 				EF348CC11FB4DEE5002F4563 /* model.swift in Sources */,
 				D42961E41FB4E85B0032D322 /* User+CoreDataClass.swift in Sources */,
+				44C123A51FD9D9D5007E0759 /* ListingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
