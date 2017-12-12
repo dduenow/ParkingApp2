@@ -84,6 +84,15 @@ class TableViewController: UITableViewController {
         
         return cell
     }
+    //Allows us to send data to detail view by using segue as identifiable action
+    func prepare(for segue: UIStoryboardSegue, sender: UITableViewCell?) {
+        if let destination = segue.destination as? ListingViewController {
+            let cell = sender
+            let selectedRow = tableView.indexPath(for: cell!)!.row
+            destination.selectedValue = records[selectedRow]
+        }
+        
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -7,31 +7,24 @@
 //
 
 import UIKit
+import CloudKit
 
 class ListingViewController: UIViewController {
-
     
     @IBOutlet weak var availability: UILabel!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var size: UILabel!
     @IBOutlet weak var listingDescription: UITextView!
     
+    var selectedValue: CKRecord = CKRecord(recordType: "ParkingSpot")
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-
-        // Do any additional setup after loading the view.
+        //set attribute values to display
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func RetrieveListings(_: [String]){
-        //call retreive listings from listings page and load the info
     }
 
 }
