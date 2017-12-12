@@ -19,7 +19,7 @@ class TableViewController: UITableViewController {
     
     let publicDatabase = CKContainer.default().privateCloudDatabase
     let zone = CKRecordZone(zoneName: "_defaultZone")
-    
+    //This is not working correctly
     func loadData() {
         let query = CKQuery(recordType: "ParkingStruct", predicate: NSPredicate(value: true))
         publicDatabase.perform(query, inZoneWith: zone.zoneID) { (ParkingStruct, error) in
@@ -83,6 +83,15 @@ class TableViewController: UITableViewController {
         cell.textLabel?.text = record.object(forKey: "locationDescription") as? String
         
         return cell
+    }
+    //Allows us to send data to detail view by using segue as identifiable action
+    func prepare(for segue: UIStoryboardSegue, sender: UITableViewCell?) {
+        if let destination = segue.destination as? ListingViewController {
+            let cell = sender
+            let selectedRow = tableView.indexPath(for: cell!)!.row
+            destination.selectedValue = records[selectedRow]
+        }
+        
     }
 
     /*
