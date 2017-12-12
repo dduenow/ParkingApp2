@@ -7,22 +7,41 @@
 //
 
 import UIKit
+import CloudKit
 
 class TableViewController: UITableViewController {
 
     @IBOutlet var listingsTableView: UITableView!
-    
+    //dwdb79@mail.missouri.edu
     //testing table view
-    var names = ["Hitt Street", "Turner Avenue", "Rollins", "Parking garage #7"]
+    //var names = ["Hitt Street", "Turner Avenue", "Rollins", "Parking garage #7"]
+    var records = [CKRecord]()
     
-    //var listings = 
+    let publicDatabase = CKContainer.default().privateCloudDatabase
+    let zone = CKRecordZone(zoneName: "_defaultZone")
+    
+    func loadData() {
+        let query = CKQuery(recordType: "ParkingStruct", predicate: NSPredicate(value: true))
+        publicDatabase.perform(query, inZoneWith: zone.zoneID) { (ParkingStruct, error) in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print(error)
+                }
+                else{
+                    self.records = ParkingStruct ?? []
+                    
+                    self.listingsTableView.reloadData()
+                }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
         self.title = nil;
-
+        //loadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -30,6 +49,10 @@ class TableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         listingsTableView.delegate = self
         listingsTableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,16 +69,18 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return names.count
+        return self.records.count
     }
     
     //toDo: replace cell info with listing info
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let name = names[indexPath.row]
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        let name = names[indexPath.row]
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        cell.textLabel?.text = name
         
-        cell.textLabel?.text = name
-        cell.detailTextLabel?.text = "Call Me"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let record = records[indexPath.row]
+        cell.textLabel?.text = record.object(forKey: "locationDescription") as? String
         
         return cell
     }
