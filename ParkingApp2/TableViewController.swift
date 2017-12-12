@@ -29,7 +29,7 @@ class TableViewController: UITableViewController {
                 }
                 else{
                     self.records = ParkingStruct ?? []
-                    
+                    self.records = self.records.reversed()
                     self.listingsTableView.reloadData()
                 }
             }

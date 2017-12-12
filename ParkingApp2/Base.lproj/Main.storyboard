@@ -10,21 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParkingApp2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="420" y="-25"/>
-        </scene>
         <!--Table View Controller-->
         <scene sceneID="apt-wj-hwM">
             <objects>
@@ -131,18 +116,22 @@
                             <constraint firstItem="SaN-G2-6f5" firstAttribute="bottom" secondItem="3wL-sY-GHq" secondAttribute="bottom" constant="296" id="3uC-JN-Cil"/>
                             <constraint firstItem="tD4-3z-yYf" firstAttribute="leading" secondItem="SaN-G2-6f5" secondAttribute="leading" constant="20" id="8XD-ZZ-oYc"/>
                             <constraint firstItem="SaN-G2-6f5" firstAttribute="trailing" secondItem="3wL-sY-GHq" secondAttribute="trailing" constant="20" id="Cdb-0O-Rk7"/>
+                            <constraint firstItem="SaN-G2-6f5" firstAttribute="trailing" secondItem="Lh9-fs-9de" secondAttribute="trailing" constant="313" id="Ex2-3h-0iJ"/>
                             <constraint firstItem="tiz-h8-iXf" firstAttribute="top" secondItem="krO-2P-K2z" secondAttribute="bottom" constant="8" id="Lbe-Oh-Mtg"/>
                             <constraint firstItem="krO-2P-K2z" firstAttribute="top" secondItem="Lh9-fs-9de" secondAttribute="bottom" constant="10" id="Md3-WF-HWH"/>
                             <constraint firstItem="tD4-3z-yYf" firstAttribute="top" secondItem="6cR-b2-k0i" secondAttribute="bottom" constant="10" id="P1X-Tj-Kwc"/>
                             <constraint firstItem="52F-vT-0Pk" firstAttribute="top" secondItem="SaN-G2-6f5" secondAttribute="top" constant="10" id="SsM-Yh-1G1"/>
                             <constraint firstItem="3wL-sY-GHq" firstAttribute="top" secondItem="52F-vT-0Pk" secondAttribute="bottom" constant="40" id="TGI-zP-9SU"/>
+                            <constraint firstItem="SaN-G2-6f5" firstAttribute="trailing" secondItem="tD4-3z-yYf" secondAttribute="trailing" constant="307" id="Ueu-Hx-PRU"/>
                             <constraint firstItem="52F-vT-0Pk" firstAttribute="leading" secondItem="SaN-G2-6f5" secondAttribute="leading" constant="20" id="ZGQ-gm-Crm"/>
                             <constraint firstItem="Lh9-fs-9de" firstAttribute="leading" secondItem="SaN-G2-6f5" secondAttribute="leading" constant="20" id="ZMx-0L-e58"/>
                             <constraint firstItem="3wL-sY-GHq" firstAttribute="leading" secondItem="SaN-G2-6f5" secondAttribute="leading" constant="20" id="gYc-ad-7FI"/>
                             <constraint firstItem="SaN-G2-6f5" firstAttribute="trailing" secondItem="52F-vT-0Pk" secondAttribute="trailing" constant="274" id="j8A-XX-bz1"/>
                             <constraint firstItem="6cR-b2-k0i" firstAttribute="top" secondItem="3wL-sY-GHq" secondAttribute="bottom" constant="40" id="jCx-hj-kMs"/>
+                            <constraint firstItem="SaN-G2-6f5" firstAttribute="trailing" secondItem="krO-2P-K2z" secondAttribute="trailing" constant="258" id="kxq-Hd-nZl"/>
                             <constraint firstItem="tiz-h8-iXf" firstAttribute="leading" secondItem="SaN-G2-6f5" secondAttribute="leading" constant="67" id="pyT-aX-Ody"/>
                             <constraint firstItem="krO-2P-K2z" firstAttribute="leading" secondItem="SaN-G2-6f5" secondAttribute="leading" constant="20" id="qhg-7i-s9m"/>
+                            <constraint firstItem="SaN-G2-6f5" firstAttribute="trailing" secondItem="6cR-b2-k0i" secondAttribute="trailing" constant="217" id="rnF-aQ-1YU"/>
                             <constraint firstItem="SaN-G2-6f5" firstAttribute="trailing" secondItem="tiz-h8-iXf" secondAttribute="trailing" constant="68" id="umL-tZ-zEy"/>
                             <constraint firstItem="6cR-b2-k0i" firstAttribute="leading" secondItem="SaN-G2-6f5" secondAttribute="leading" constant="20" id="yFZ-pl-X9Y"/>
                         </constraints>
