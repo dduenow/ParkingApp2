@@ -17,12 +17,13 @@ class TableViewController: UITableViewController {
     //var names = ["Hitt Street", "Turner Avenue", "Rollins", "Parking garage #7"]
     var records = [CKRecord]()
     
-    let publicDatabase = CKContainer.default().privateCloudDatabase
+    let privateDatabase = CKContainer.default().privateCloudDatabase
     let zone = CKRecordZone(zoneName: "_defaultZone")
     //This is not working correctly
+    //<<False>>. It appears to not work if your private cloudkit db is empty
     func loadData() {
         let query = CKQuery(recordType: "ParkingStruct", predicate: NSPredicate(value: true))
-        publicDatabase.perform(query, inZoneWith: zone.zoneID) { (ParkingStruct, error) in
+        privateDatabase.perform(query, inZoneWith: zone.zoneID) { (ParkingStruct, error) in
             DispatchQueue.main.async {
                 if let error = error {
                     print(error)
