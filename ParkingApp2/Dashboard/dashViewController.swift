@@ -13,7 +13,7 @@ class dashViewController: UIViewController {
     @IBOutlet weak var profileName: UITextField!
     @IBOutlet weak var email: UITextField!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +24,8 @@ class dashViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
 
     /*
