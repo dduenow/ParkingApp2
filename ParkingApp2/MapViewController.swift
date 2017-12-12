@@ -26,7 +26,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var spots: [Spot] = [
         Spot(latitude: 38.946336, longitude: -92.330565,
                  title: "Test1", subtitle: "University of Missouri",
-                 price: 1.00, size: "Two normal vehicles", detail: "normal spot that can fit two vehicles"),
+                 price: 1.00, size: "Two normal vehicles", detail: "normal spot that can fit two vehiclesasdfasdfasdfal;sdkfjasl;dkfjals;dkfjas;ldkfja;ldskfja;"),
         Spot(latitude: 38.945176, longitude: -92.328838,
                  title: "T2", subtitle: "University of Missouri",
                  price: 1.00, size: "One spaceship", detail: "parking spot available for one spaceship"),

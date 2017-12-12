@@ -25,11 +25,17 @@ class DetailViewController: UIViewController {
 
         if let spot = spot {
             priceLabel.text = spot.price.description
+            priceLabel.textColor = UIColor.green
             sizeLabel.text = spot.size
+            sizeLabel.lineBreakMode = .byWordWrapping
+            sizeLabel.numberOfLines = 0
+            sizeLabel.sizeToFit()
             detailLabel.text = spot.detail
+            detailLabel.lineBreakMode = .byWordWrapping
+            detailLabel.numberOfLines = 0
+            detailLabel.sizeToFit()
             
         }
-        
         // Do any additional setup after loading the view.
     }
 
