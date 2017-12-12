@@ -158,7 +158,7 @@
         <scene sceneID="pRu-CR-jYj">
             <objects>
                 <navigationController id="cvC-y3-jEr" userLabel="Listings" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Listings" image="list" id="2gN-Fl-cWU">
+                    <tabBarItem key="tabBarItem" title="" image="list" id="2gN-Fl-cWU">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9jN-vZ-QC8">
@@ -183,7 +183,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="zaq-bK-qeI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="zPq-7j-LTX"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="pin" id="zPq-7j-LTX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8a-Cd-UHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,7 +199,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ahI-iw-FqM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="ol1-YF-8a4"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="home" id="ol1-YF-8a4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEy-Dw-1PR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -227,6 +227,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="list" width="50" height="50"/>
+        <image name="home" width="30" height="30"/>
+        <image name="list" width="30" height="30"/>
+        <image name="pin" width="30" height="30"/>
     </resources>
 </document>
