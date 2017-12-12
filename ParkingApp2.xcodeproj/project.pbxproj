@@ -197,6 +197,7 @@
 				D42961E21FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift in Sources */,
 				EF5E0C631FD9CF5F00BA242D /* TableViewController.swift in Sources */,
 				D45850BF1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld in Sources */,
+				D489EE441FDA12870097A1DA /* CKCodable-4.swift in Sources */,
 				D42961E31FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift in Sources */,
 				EF6EB0BD1FD8F1E40080CDCD /* ParkingSpot.swift in Sources */,
 				D42961E41FB4E85B0032D322 /* User+CoreDataClass.swift in Sources */,
