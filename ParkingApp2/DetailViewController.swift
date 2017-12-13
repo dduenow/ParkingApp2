@@ -9,16 +9,16 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    
+
     var spot: Spot?
-    
+
     @IBOutlet weak var datesAvail: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var sizeLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var rentButton: UIButton!
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class DetailViewController: UIViewController {
             detailLabel.lineBreakMode = .byWordWrapping
             detailLabel.numberOfLines = 0
             detailLabel.sizeToFit()
-            
+
         }
         // Do any additional setup after loading the view.
     }
@@ -43,7 +43,7 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation
@@ -56,3 +56,4 @@ class DetailViewController: UIViewController {
     */
 
 }
+

@@ -17,7 +17,7 @@ struct ParkingStruct : CloudKitCodable {
     var startDate: Date
     var endDate: Date
     var locationDescription: String
-    var price: Double
+    var price: String
     var carSize: String
     var description: String?
     var contactMethod: String

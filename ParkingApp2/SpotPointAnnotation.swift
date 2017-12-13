@@ -13,3 +13,7 @@ class SpotPointAnnotation: MKPointAnnotation {
     var spot: Spot?
 
 }
+
+class ListingPointAnnotation: MKPointAnnotation{
+    var listing: ParkingStruct?
+}
