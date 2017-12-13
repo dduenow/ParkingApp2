@@ -189,6 +189,22 @@
             </objects>
             <point key="canvasLocation" x="421" y="1457"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="mAg-Em-YA1">
+            <objects>
+                <viewController id="VAe-DS-jAa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GQe-iI-ncg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="aSe-0U-fME"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oK-Q0-oVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="1292"/>
+        </scene>
         <!--Dashboard-->
         <scene sceneID="hYi-cl-cxU">
             <objects>
@@ -238,6 +254,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Ged-qW-qCB" kind="show" id="e9Y-8d-aeg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </subviews>
                             </stackView>
@@ -258,6 +277,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="VAe-DS-jAa" kind="show" id="s2t-FG-Sq4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </subviews>
                             </stackView>
@@ -269,7 +291,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEy-Dw-1PR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="420" y="793.8530734632684"/>
+            <point key="canvasLocation" x="420" y="791"/>
+        </scene>
+        <!--Renters-->
+        <scene sceneID="ySp-pd-SVx">
+            <objects>
+                <viewController id="Ged-qW-qCB" userLabel="Renters" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="REa-Bv-h0V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="ReR-RN-tTN"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vLh-MY-Xkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="609"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L81-H5-8Mp">
