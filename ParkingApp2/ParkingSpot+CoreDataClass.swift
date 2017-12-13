@@ -14,8 +14,12 @@ import CoreData
 @objc(ParkingSpot)
 public class ParkingSpot: NSManagedObject {
     var date: Date? {
-    get {
-    return dateAvailability as Date?
+        get {
+            return dateAvailability as Date?
+        }
+        set(newDate){
+            dateAvailability = newDate as NSDate?
+        }
     }
     set(newDate){
     dateAvailability = newDate as NSDate?

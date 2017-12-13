@@ -25,5 +25,5 @@ extension ParkingSpot {
     @NSManaged public var spotsAvailable: Int16
     @NSManaged public var timeAvailability: String?
     @NSManaged public var user: User?
-    
+
 }
