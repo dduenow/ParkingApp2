@@ -19,6 +19,12 @@
 		D45850CE1FB4DB4600E80531 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45850CD1FB4DB4600E80531 /* CloudKit.framework */; };
 		D47EF88F1FBE640900BD90D7 /* NewParkingSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47EF88E1FBE640900BD90D7 /* NewParkingSpotViewController.swift */; };
 		EF0BC43E1FDC8E8C00228482 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0BC43D1FDC8E8C00228482 /* DetailViewController.swift */; };
+		EF0BC4431FE0BAE300228482 /* ListingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0BC4421FE0BAE300228482 /* ListingStruct.swift */; };
+		EF0BC4451FE0BB0D00228482 /* CKCodable-4.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0BC4441FE0BB0D00228482 /* CKCodable-4.swift */; };
+		EF0BC44A1FE0BB6F00228482 /* dashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0BC4461FE0BB6E00228482 /* dashboardViewController.swift */; };
+		EF0BC44B1FE0BB6F00228482 /* NewParkingSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0BC4471FE0BB6E00228482 /* NewParkingSpotViewController.swift */; };
+		EF0BC44C1FE0BB6F00228482 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0BC4481FE0BB6E00228482 /* ListingViewController.swift */; };
+		EF0BC44D1FE0BB6F00228482 /* dashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0BC4491FE0BB6E00228482 /* dashboardView.swift */; };
 		EF5E0C631FD9CF5F00BA242D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5E0C621FD9CF5F00BA242D /* TableViewController.swift */; };
 		EF6EB0BD1FD8F1E40080CDCD /* ParkingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EB0BC1FD8F1E40080CDCD /* ParkingSpot.swift */; };
 		EF6EB0C11FD8F7B10080CDCD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EB0C01FD8F7B10080CDCD /* MapViewController.swift */; };
@@ -41,6 +47,12 @@
 		D45850CD1FB4DB4600E80531 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D47EF88E1FBE640900BD90D7 /* NewParkingSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewParkingSpotViewController.swift; sourceTree = "<group>"; };
 		EF0BC43D1FDC8E8C00228482 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EF0BC4421FE0BAE300228482 /* ListingStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingStruct.swift; sourceTree = "<group>"; };
+		EF0BC4441FE0BB0D00228482 /* CKCodable-4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CKCodable-4.swift"; sourceTree = "<group>"; };
+		EF0BC4461FE0BB6E00228482 /* dashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dashboardViewController.swift; sourceTree = "<group>"; };
+		EF0BC4471FE0BB6E00228482 /* NewParkingSpotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewParkingSpotViewController.swift; sourceTree = "<group>"; };
+		EF0BC4481FE0BB6E00228482 /* ListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
+		EF0BC4491FE0BB6E00228482 /* dashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dashboardView.swift; sourceTree = "<group>"; };
 		EF5E0C621FD9CF5F00BA242D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		EF6EB0BC1FD8F1E40080CDCD /* ParkingSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSpot.swift; sourceTree = "<group>"; };
 		EF6EB0C01FD8F7B10080CDCD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +95,7 @@
 				D42961DF1FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift */,
 				D42961E01FB4E85B0032D322 /* User+CoreDataClass.swift */,
 				D42961E11FB4E85B0032D322 /* User+CoreDataProperties.swift */,
+				EF0BC4481FE0BB6E00228482 /* ListingViewController.swift */,
 				D47EF88E1FBE640900BD90D7 /* NewParkingSpotViewController.swift */,
 				D45850CB1FB4DB4400E80531 /* ParkingApp2.entitlements */,
 				D45850B61FB4DB3B00E80531 /* AppDelegate.swift */,
@@ -92,7 +105,12 @@
 				D45850C21FB4DB3B00E80531 /* LaunchScreen.storyboard */,
 				D45850C51FB4DB3B00E80531 /* Info.plist */,
 				D45850BD1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld */,
+				EF0BC4441FE0BB0D00228482 /* CKCodable-4.swift */,
+				EF0BC4491FE0BB6E00228482 /* dashboardView.swift */,
+				EF0BC4461FE0BB6E00228482 /* dashboardViewController.swift */,
+				EF0BC4471FE0BB6E00228482 /* NewParkingSpotViewController.swift */,
 				EF6EB0C01FD8F7B10080CDCD /* MapViewController.swift */,
+				EF0BC4421FE0BAE300228482 /* ListingStruct.swift */,
 				EF5E0C621FD9CF5F00BA242D /* TableViewController.swift */,
 				EF6EB0C21FD8FEBB0080CDCD /* SpotPointAnnotation.swift */,
 				EF0BC43D1FDC8E8C00228482 /* DetailViewController.swift */,
@@ -192,14 +210,20 @@
 				D45850B71FB4DB3B00E80531 /* AppDelegate.swift in Sources */,
 				D42961E51FB4E85B0032D322 /* User+CoreDataProperties.swift in Sources */,
 				EF0BC43E1FDC8E8C00228482 /* DetailViewController.swift in Sources */,
+				EF0BC44A1FE0BB6F00228482 /* dashboardViewController.swift in Sources */,
 				EF6EB0C31FD8FEBB0080CDCD /* SpotPointAnnotation.swift in Sources */,
 				EF6EB0C11FD8F7B10080CDCD /* MapViewController.swift in Sources */,
 				D42961E21FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift in Sources */,
+				EF0BC44B1FE0BB6F00228482 /* NewParkingSpotViewController.swift in Sources */,
+				EF0BC44D1FE0BB6F00228482 /* dashboardView.swift in Sources */,
 				EF5E0C631FD9CF5F00BA242D /* TableViewController.swift in Sources */,
 				D45850BF1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld in Sources */,
 				D42961E31FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift in Sources */,
+				EF0BC44C1FE0BB6F00228482 /* ListingViewController.swift in Sources */,
 				EF6EB0BD1FD8F1E40080CDCD /* ParkingSpot.swift in Sources */,
+				EF0BC4431FE0BAE300228482 /* ListingStruct.swift in Sources */,
 				D42961E41FB4E85B0032D322 /* User+CoreDataClass.swift in Sources */,
+				EF0BC4451FE0BB0D00228482 /* CKCodable-4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
