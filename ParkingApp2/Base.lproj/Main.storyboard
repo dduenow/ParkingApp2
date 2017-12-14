@@ -221,7 +221,19 @@
                     <view key="view" contentMode="scaleToFill" id="GQe-iI-ncg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fqy-Ug-BAM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fqy-Ug-BAM" firstAttribute="leading" secondItem="aSe-0U-fME" secondAttribute="leading" id="3FZ-db-iDr"/>
+                            <constraint firstItem="fqy-Ug-BAM" firstAttribute="top" secondItem="aSe-0U-fME" secondAttribute="top" id="lYY-wJ-AVi"/>
+                            <constraint firstItem="aSe-0U-fME" firstAttribute="trailing" secondItem="fqy-Ug-BAM" secondAttribute="trailing" id="oCc-c1-49n"/>
+                            <constraint firstItem="aSe-0U-fME" firstAttribute="bottom" secondItem="fqy-Ug-BAM" secondAttribute="bottom" id="oFh-Im-nUY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aSe-0U-fME"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
@@ -326,7 +338,19 @@
                     <view key="view" contentMode="scaleToFill" id="REa-Bv-h0V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GT7-cW-Kpk">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GT7-cW-Kpk" firstAttribute="leading" secondItem="ReR-RN-tTN" secondAttribute="leading" id="Oyj-Z4-Ndf"/>
+                            <constraint firstItem="ReR-RN-tTN" firstAttribute="trailing" secondItem="GT7-cW-Kpk" secondAttribute="trailing" id="cW8-4j-4T9"/>
+                            <constraint firstItem="GT7-cW-Kpk" firstAttribute="top" secondItem="ReR-RN-tTN" secondAttribute="top" id="qbl-sd-bV5"/>
+                            <constraint firstItem="ReR-RN-tTN" firstAttribute="bottom" secondItem="GT7-cW-Kpk" secondAttribute="bottom" id="ySo-Cj-Pv5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ReR-RN-tTN"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
@@ -346,63 +370,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="HgP-AE-c4U" kind="relationship" relationship="viewControllers" id="hgs-9F-rit"/>
                         <segue destination="HLv-P4-70s" kind="relationship" relationship="viewControllers" id="0T5-yl-VbZ"/>
                         <segue destination="cvC-y3-jEr" kind="relationship" relationship="viewControllers" id="dPq-yc-v49"/>
+                        <segue destination="Fvv-1X-DTV" kind="show" id="jHj-9G-MzA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IK5-Ql-i7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-586" y="1129"/>
-        </scene>
-        <!--Seller View Controller-->
-        <scene sceneID="JNk-me-ftn">
-            <objects>
-                <viewController id="Ccj-6s-eMB" customClass="SellerViewController" customModule="ParkingApp2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1TJ-zv-shv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="p65-Dh-qT7">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p65-Dh-qT7" id="YUz-PP-BZe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="gxl-Tg-KGc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hbs-jU-o9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2382" y="420"/>
-        </scene>
-        <!--Renter View Controller-->
-        <scene sceneID="DZt-Ty-SZp">
-            <objects>
-                <viewController id="SfM-UJ-JbX" customClass="RenterViewController" customModule="ParkingApp2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4eU-8w-nwP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7mj-MI-Cmw">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7mj-MI-Cmw" id="anc-mf-pKi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="doo-Oi-nnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2382" y="1164"/>
         </scene>
     </scenes>
     <resources>
