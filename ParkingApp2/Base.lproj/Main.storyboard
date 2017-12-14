@@ -206,6 +206,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fxq-9S-3fl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="lJM-0z-7Gh"/>
+                                </items>
+                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fqy-Ug-BAM">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -344,12 +351,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fOM-3m-Ic9">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="ylH-uR-8xc"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ReR-RN-tTN" firstAttribute="top" secondItem="fOM-3m-Ic9" secondAttribute="top" constant="44" id="5ES-m7-Hpz"/>
                             <constraint firstItem="GT7-cW-Kpk" firstAttribute="leading" secondItem="ReR-RN-tTN" secondAttribute="leading" id="Oyj-Z4-Ndf"/>
                             <constraint firstItem="ReR-RN-tTN" firstAttribute="trailing" secondItem="GT7-cW-Kpk" secondAttribute="trailing" id="cW8-4j-4T9"/>
                             <constraint firstItem="GT7-cW-Kpk" firstAttribute="top" secondItem="ReR-RN-tTN" secondAttribute="top" id="qbl-sd-bV5"/>
+                            <constraint firstItem="GT7-cW-Kpk" firstAttribute="top" secondItem="fOM-3m-Ic9" secondAttribute="bottom" id="xEY-Mw-83B"/>
                             <constraint firstItem="ReR-RN-tTN" firstAttribute="bottom" secondItem="GT7-cW-Kpk" secondAttribute="bottom" id="ySo-Cj-Pv5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ReR-RN-tTN"/>
@@ -362,6 +377,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLh-MY-Xkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2063" y="244"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v1F-MP-1ix">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pr7-2l-f69" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="0Fg-ud-JH6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cxn-rh-hJp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ffn-2u-eSf" kind="show" id="Z6o-Nd-cjq"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-2344" y="1150"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L81-H5-8Mp">
