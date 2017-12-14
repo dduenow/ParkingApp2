@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		447C58B61FD7368E00878DBC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C58B51FD7368E00878DBC /* TableViewController.swift */; };
+		448DE5381FE2B88700A7F301 /* NewParkingSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DE5371FE2B88700A7F301 /* NewParkingSpotViewController.swift */; };
 		46424E8D1FD9C4D10065809C /* dashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46424E8C1FD9C4D10065809C /* dashViewController.swift */; };
 		46C070B11FE222DD00236CF0 /* CKCodable-5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C070B01FE222DD00236CF0 /* CKCodable-5.swift */; };
 		46C070B31FE2247A00236CF0 /* ListingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C070B21FE2247A00236CF0 /* ListingStruct.swift */; };
@@ -25,11 +26,11 @@
 		D45850C11FB4DB3B00E80531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45850C01FB4DB3B00E80531 /* Assets.xcassets */; };
 		D45850C41FB4DB3B00E80531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45850C21FB4DB3B00E80531 /* LaunchScreen.storyboard */; };
 		D45850CE1FB4DB4600E80531 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45850CD1FB4DB4600E80531 /* CloudKit.framework */; };
-		D47EF88F1FBE640900BD90D7 /* NewParkingSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47EF88E1FBE640900BD90D7 /* NewParkingSpotViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		447C58B51FD7368E00878DBC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		448DE5371FE2B88700A7F301 /* NewParkingSpotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewParkingSpotViewController.swift; sourceTree = "<group>"; };
 		46424E8C1FD9C4D10065809C /* dashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashViewController.swift; sourceTree = "<group>"; };
 		46C070B01FE222DD00236CF0 /* CKCodable-5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CKCodable-5.swift"; sourceTree = "<group>"; };
 		46C070B21FE2247A00236CF0 /* ListingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingStruct.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 				D45850B51FB4DB3B00E80531 /* ParkingApp2 */,
 				D45850B41FB4DB3B00E80531 /* Products */,
 				D45850CC1FB4DB4600E80531 /* Frameworks */,
-				D406BA7A1FDF259600647D7A /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,8 +114,8 @@
 				D42961DF1FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift */,
 				D42961E01FB4E85B0032D322 /* User+CoreDataClass.swift */,
 				D42961E11FB4E85B0032D322 /* User+CoreDataProperties.swift */,
-				D47EF88E1FBE640900BD90D7 /* NewParkingSpotViewController.swift */,
 				D45850CB1FB4DB4400E80531 /* ParkingApp2.entitlements */,
+				448DE5371FE2B88700A7F301 /* NewParkingSpotViewController.swift */,
 				D45850B61FB4DB3B00E80531 /* AppDelegate.swift */,
 				D45850B81FB4DB3B00E80531 /* ViewController.swift */,
 				D45850BA1FB4DB3B00E80531 /* Main.storyboard */,
@@ -223,6 +223,7 @@
 				D45850B71FB4DB3B00E80531 /* AppDelegate.swift in Sources */,
 				D42961E51FB4E85B0032D322 /* User+CoreDataProperties.swift in Sources */,
 				447C58B61FD7368E00878DBC /* TableViewController.swift in Sources */,
+				448DE5381FE2B88700A7F301 /* NewParkingSpotViewController.swift in Sources */,
 				D42961E21FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift in Sources */,
 				46C070B11FE222DD00236CF0 /* CKCodable-5.swift in Sources */,
 				70F3D6011FE090DA003F5CB5 /* SellerViewController.swift in Sources */,
@@ -231,7 +232,6 @@
 				D45850BF1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld in Sources */,
 				D42961E31FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift in Sources */,
 				D42961E41FB4E85B0032D322 /* User+CoreDataClass.swift in Sources */,
-				D406BA7E1FDF260B00647D7A /* CKCodable-5.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
