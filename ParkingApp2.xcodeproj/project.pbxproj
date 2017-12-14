@@ -10,6 +10,8 @@
 		447C58B61FD7368E00878DBC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C58B51FD7368E00878DBC /* TableViewController.swift */; };
 		448DE5381FE2B88700A7F301 /* NewParkingSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DE5371FE2B88700A7F301 /* NewParkingSpotViewController.swift */; };
 		448DE53A1FE2BA6300A7F301 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DE5391FE2BA6300A7F301 /* DetailViewController.swift */; };
+		448DE53D1FE2BAF200A7F301 /* SpotPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DE53B1FE2BAF200A7F301 /* SpotPointAnnotation.swift */; };
+		448DE53E1FE2BAF200A7F301 /* ParkingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DE53C1FE2BAF200A7F301 /* ParkingSpot.swift */; };
 		46424E8D1FD9C4D10065809C /* dashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46424E8C1FD9C4D10065809C /* dashViewController.swift */; };
 		46C070B11FE222DD00236CF0 /* CKCodable-5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C070B01FE222DD00236CF0 /* CKCodable-5.swift */; };
 		46C070B31FE2247A00236CF0 /* ListingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C070B21FE2247A00236CF0 /* ListingStruct.swift */; };
@@ -33,6 +35,8 @@
 		447C58B51FD7368E00878DBC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		448DE5371FE2B88700A7F301 /* NewParkingSpotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewParkingSpotViewController.swift; sourceTree = "<group>"; };
 		448DE5391FE2BA6300A7F301 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../../DetailViewController.swift; sourceTree = "<group>"; };
+		448DE53B1FE2BAF200A7F301 /* SpotPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpotPointAnnotation.swift; path = ../../SpotPointAnnotation.swift; sourceTree = "<group>"; };
+		448DE53C1FE2BAF200A7F301 /* ParkingSpot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParkingSpot.swift; path = ../../ParkingSpot.swift; sourceTree = "<group>"; };
 		46424E8C1FD9C4D10065809C /* dashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashViewController.swift; sourceTree = "<group>"; };
 		46C070B01FE222DD00236CF0 /* CKCodable-5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CKCodable-5.swift"; sourceTree = "<group>"; };
 		46C070B21FE2247A00236CF0 /* ListingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingStruct.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				D42961DF1FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift */,
 				D42961E01FB4E85B0032D322 /* User+CoreDataClass.swift */,
 				D42961E11FB4E85B0032D322 /* User+CoreDataProperties.swift */,
+				448DE53C1FE2BAF200A7F301 /* ParkingSpot.swift */,
+				448DE53B1FE2BAF200A7F301 /* SpotPointAnnotation.swift */,
 				D45850CB1FB4DB4400E80531 /* ParkingApp2.entitlements */,
 				448DE5391FE2BA6300A7F301 /* DetailViewController.swift */,
 				448DE5371FE2B88700A7F301 /* NewParkingSpotViewController.swift */,
@@ -228,12 +234,14 @@
 				447C58B61FD7368E00878DBC /* TableViewController.swift in Sources */,
 				448DE5381FE2B88700A7F301 /* NewParkingSpotViewController.swift in Sources */,
 				448DE53A1FE2BA6300A7F301 /* DetailViewController.swift in Sources */,
+				448DE53E1FE2BAF200A7F301 /* ParkingSpot.swift in Sources */,
 				D42961E21FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift in Sources */,
 				46C070B11FE222DD00236CF0 /* CKCodable-5.swift in Sources */,
 				70F3D6011FE090DA003F5CB5 /* SellerViewController.swift in Sources */,
 				46C070B31FE2247A00236CF0 /* ListingStruct.swift in Sources */,
 				46C070B51FE2393700236CF0 /* RentViewController.swift in Sources */,
 				D45850BF1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld in Sources */,
+				448DE53D1FE2BAF200A7F301 /* SpotPointAnnotation.swift in Sources */,
 				D42961E31FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift in Sources */,
 				D42961E41FB4E85B0032D322 /* User+CoreDataClass.swift in Sources */,
 			);
