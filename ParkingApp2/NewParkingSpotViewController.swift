@@ -18,10 +18,14 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
     @IBOutlet weak var contactMethodTextField: UITextField!
     @IBOutlet weak var startDateTextField: UITextField!
     @IBOutlet weak var endDateTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var savingView: UIView!
+    @IBOutlet weak var savingActivityIndicator: UIActivityIndicatorView!
     
     var startDate: Date?
     var endDate: Date?
+    
+    var firstName: String?
+    var lastName: String?
     
     let sizePickerData = ["Car", "Truck", "SUV", "Jeep"]
     
@@ -33,7 +37,8 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
     }()
 
     let sizePickerView = UIPickerView()
-    let datePicker = UIDatePicker()
+    let startDatePicker = UIDatePicker()
+    let endDatePicker = UIDatePicker()
     let toolBar: UIToolbar = {
         let bar = UIToolbar()
         bar.barStyle = .default
@@ -45,12 +50,10 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         return bar
     }()
     
-    var firstName: String?
-    var lastName: String?
     var email: String = "dwdb79@mail.missouri.edu"
     
-    let publicDatabase = CKContainer.default().publicCloudDatabase
-    let recordZone = CKRecordZone(zoneName: "ParkingZone")
+//    let publicDatabase = CKContainer.default().publicCloudDatabase
+//    let recordZone = CKRecordZone(zoneName: "ParkingZone")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,11 +70,11 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
-        startDateTextField.inputView = datePicker
+        startDateTextField.inputView = startDatePicker
         startDateTextField.inputAccessoryView = toolBar
         startDateTextField.tintColor = .clear
-        
-        endDateTextField.inputView = datePicker
+
+        endDateTextField.inputView = endDatePicker
         endDateTextField.inputAccessoryView = toolBar
         endDateTextField.tintColor = .clear
         
@@ -79,23 +82,9 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         sizeTextField.inputAccessoryView = toolBar
         sizeTextField.tintColor = .clear
         
-//        CKContainer.default().requestApplicationPermission(.userDiscoverability) { (status, error) in
-//            CKContainer.default().fetchUserRecordID { (record, error) in
-//                CKContainer.default().discoverUserIdentity(withUserRecordID: record!, completionHandler: { (userID, error) in
-//                    print(userID?.hasiCloudAccount)
-//                    print(userID?.lookupInfo?.phoneNumber)
-//                    print(userID?.lookupInfo?.emailAddress)
-//                    print((userID?.nameComponents?.givenName)! + " " + (userID?.nameComponents?.familyName)!)
-//                })
-//            }
-//        }
+        sizeTextField.text = sizePickerData[0]
         
-        Cloud.defaultPublicDatabase().userInformation { (user, error) in
-            self.firstName = user?.firstName
-            self.firstName? += " "
-            self.firstName? += (user?.lastName)!
-            self.lastName = user?.lastName
-                }
+
     }
     
     @objc func resignKeyboard() {
@@ -107,8 +96,6 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         contactMethodTextField.resignFirstResponder()
         startDateTextField.resignFirstResponder()
         endDateTextField.resignFirstResponder()
-        datePicker.resignFirstResponder()
-        nameTextField.resignFirstResponder()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -138,56 +125,123 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
     }
     
     @IBAction func changeDateStart(_ sender: UITextField) {
-        startDateTextField.text = dateFormatter.string(from: datePicker.date)
-        startDate = datePicker.date
+        startDateTextField.text = dateFormatter.string(from: startDatePicker.date)
+        startDate = startDatePicker.date
     }
     
     @IBAction func changeDateEnd(_ sender: UITextField) {
-        endDateTextField.text = dateFormatter.string(from: datePicker.date)
-        endDate = datePicker.date
+        endDateTextField.text = dateFormatter.string(from: endDatePicker.date)
+        endDate = endDatePicker.date.addingTimeInterval(30.0 * 60.0)
     }
     
     
     @IBAction func saveSpot(_ sender: Any){
-
-        let listing = ParkingStruct(cloudInformation: nil, name: firstName!, rentorEmail: email, startDate: startDate!, endDate: endDate!, locationDescription: locationDescriptionField.text!, price: priceTextField.text!, carSize: sizeTextField.text!, description: descriptionTextField.text!, contactMethod: contactMethodTextField.text!, renteeEmail: nil)
+        savingView.isHidden = false
+        let defaultAction = UIAlertAction(title: "Close", style: .default, handler: nil)
+       
+        guard let locationDescription = locationDescriptionField.text, !(locationDescriptionField.text?.isEmpty ?? true) else {
+            let alertController = UIAlertController(title: "Error", message: "Location description has not been filled out. Please fill out this field.", preferredStyle: .alert)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            savingView.isHidden = true
+            return
+        }
         
-        guard let firstName = firstName, !firstName.isEmpty else {
-            // raise error
+        guard let price = priceTextField.text, !(priceTextField.text?.isEmpty ?? true) else {
+            let alertController = UIAlertController(title: "Error", message: "Price has not been set. Please set a price.", preferredStyle: .alert)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            savingView.isHidden = true
+            return
+        }
+        
+        guard let description = descriptionTextField.text, !(descriptionTextField.text?.isEmpty ?? true) else {
+            let alertController = UIAlertController(title: "Error", message: "Description has not been filled out. Please fill out this field.", preferredStyle: .alert)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            savingView.isHidden = true
+            return
+        }
+        
+        guard let startDate = startDate, !(startDateTextField.text?.isEmpty ?? true) else {
+            let alertController = UIAlertController(title: "Error", message: "Start time for the spot has not been set.", preferredStyle: .alert)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            savingView.isHidden = true
+            return
+        }
+        
+        guard let endDate = endDate, !(endDateTextField.text?.isEmpty ?? true) else {
+            let alertController = UIAlertController(title: "Error", message: "End time for the spot has not been set.", preferredStyle: .alert)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            savingView.isHidden = true
+            return
+        }
+        
+        guard let carSize = sizeTextField.text, !(sizeTextField.text?.isEmpty ?? true) else {
+                let alertController = UIAlertController(title: "Error", message: "End time for the spot has not been set.", preferredStyle: .alert)
+            
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                savingView.isHidden = true
+            return
+        }
+        
+        guard let contactMethod = contactMethodTextField.text, !(descriptionTextField.text?.isEmpty ?? true) else {
+                let alertController = UIAlertController(title: "Error", message: "End time for the spot has not been set.", preferredStyle: .alert)
+            
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                savingView.isHidden = true
             return
         }
         
         let cloud = Cloud.defaultPublicDatabase()
+        cloud.userInformation { (user , error) in
+            if let _ = error {
+                let alertController = UIAlertController(title: "Opps", message: "It seems we were unable to save your listing. Please check your internet connection.", preferredStyle: .alert)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+            } else {
+                self.firstName = user?.firstName
+                self.lastName = user?.lastName
+            }
+        }
+        
+        guard let firstName = firstName else{
+                savingView.isHidden = true
+            return
+        }
+        
+        guard let lastName = lastName else {
+                savingView.isHidden = true
+            return
+        }
+        
+        let name = firstName + " " + lastName
+        
+        let listing = ParkingStruct(cloudInformation: nil, rentorName: name, rentorEmail: email, startDate: startDate, endDate: endDate, locationDescription: locationDescription, price: price, carSize: carSize, description: description, contactMethod: contactMethod, renteeEmail: nil, renteeName: nil)
         
         cloud.save(listing) { (error) in
             if let error = error {
                 let alertController = UIAlertController(title: "Opps", message: "It seems we were unable to save your listing. Please check your internet connection.", preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "Close Alert", style: .default, handler: nil)
+
                 alertController.addAction(defaultAction)
                 self.present(alertController, animated: true, completion: nil)
                 print(error)
             } else {
                 print("Listing saved")
-//                self.navigationController?.popViewController(animated: true)
+                self.navigationController?.popViewController(animated: true)
+                self.savingView.isHidden = true
             }
         }
-//        let date = datePicker.date as CKRecordValue
-        
-//        record.setObject(date, forKey: "date")
-        
-//        CKContainer.default().requestApplicationPermission(.userDiscoverability) { (status, error) in
-//            CKContainer.default().fetchUserRecordID(completionHandler: { (record, error) in
-//                if let record = record {
-//                    CKContainer.default().discoverUserIdentity(withUserRecordID: record, completionHandler: { (userID, error) in
-//                        if let userID = userID {
-//                            print(userID.nameComponents?.givenName)
-//                            print(userID.lookupInfo?.emailAddress)
-//                        }
-//                    })
-//                }
-//            })
-//        }
-        
     }
 }
 
@@ -201,14 +255,38 @@ extension NewParkingSpotViewController: UITextFieldDelegate {
         contactMethodTextField.resignFirstResponder()
         startDateTextField.resignFirstResponder()
         endDateTextField.resignFirstResponder()
-        datePicker.resignFirstResponder()
-        nameTextField.resignFirstResponder()
         return true
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         sizeTextField.text = sizePickerData.first
+        
+        if textField === startDateTextField {
+            startDatePicker.minimumDate = Date()
+            endDatePicker.minimumDate = Date(timeInterval: 30.0 * 60.0, since: startDatePicker.date)
+            endDate = endDatePicker.date
+            endDateTextField.text = dateFormatter.string(from: endDatePicker.date)
+        }
+        
+        if textField === endDateTextField {
+            startDatePicker.minimumDate = Date()
+            endDatePicker.minimumDate = Date(timeInterval: 30.0 * 60.0, since: startDatePicker.date)
+            startDate = startDatePicker.date
+            startDateTextField.text = dateFormatter.string(from: startDatePicker.date)
+        }
+        
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField === startDateTextField{
+            if let _startDate = startDate, let _endDate = endDate, (_startDate.addingTimeInterval(30.0 * 60.0) >= _endDate) {
+                endDatePicker.minimumDate = Date(timeInterval: 30.0 * 60.0, since: startDatePicker.date)
+                endDatePicker.date = startDatePicker.date.addingTimeInterval(30.0 * 60.0)
+                endDate = endDatePicker.date
+                endDateTextField.text = dateFormatter.string(from: endDatePicker.date)
+            }
+        }
     }
 }
 
