@@ -24,7 +24,3 @@ struct ParkingStruct : CloudKitCodable {
     var renteeEmail: String?
     var renteeName: String?
 }
-
-
-
-

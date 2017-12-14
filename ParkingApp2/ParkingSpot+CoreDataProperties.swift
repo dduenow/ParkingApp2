@@ -2,7 +2,7 @@
 //  ParkingSpot+CoreDataProperties.swift
 //  ParkingApp2
 //
-//  Created by David Duenow on 11/9/17.
+//  Created by David Duenow on 11/16/17.
 //  Copyright © 2017 David Duenow. All rights reserved.
 //
 //
@@ -25,5 +25,6 @@ extension ParkingSpot {
     @NSManaged public var renterUserId: String?
     @NSManaged public var spotsAvailable: Int16
     @NSManaged public var timeAvailability: String?
+    @NSManaged public var user: User?
 
 }
