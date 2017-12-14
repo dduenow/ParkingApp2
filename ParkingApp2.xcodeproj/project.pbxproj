@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D406BA7C1FDF25B300647D7A /* ListingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406BA7B1FDF25B300647D7A /* ListingStruct.swift */; };
-		D406BA7E1FDF260B00647D7A /* CKCodable-5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406BA7D1FDF260B00647D7A /* CKCodable-5.swift */; };
+		447C58B61FD7368E00878DBC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C58B51FD7368E00878DBC /* TableViewController.swift */; };
+		46424E8D1FD9C4D10065809C /* dashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46424E8C1FD9C4D10065809C /* dashViewController.swift */; };
+		46C070B11FE222DD00236CF0 /* CKCodable-5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C070B01FE222DD00236CF0 /* CKCodable-5.swift */; };
+		46C070B31FE2247A00236CF0 /* ListingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C070B21FE2247A00236CF0 /* ListingStruct.swift */; };
+		46C070B51FE2393700236CF0 /* RentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C070B41FE2393700236CF0 /* RentViewController.swift */; };
+		70F3D5FD1FE06F29003F5CB5 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D5FC1FE06F29003F5CB5 /* ListingViewController.swift */; };
+		70F3D6011FE090DA003F5CB5 /* SellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D6001FE090DA003F5CB5 /* SellerViewController.swift */; };
 		D42961E21FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42961DE1FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift */; };
 		D42961E31FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42961DF1FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift */; };
 		D42961E41FB4E85B0032D322 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42961E01FB4E85B0032D322 /* User+CoreDataClass.swift */; };
@@ -24,8 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D406BA7B1FDF25B300647D7A /* ListingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingStruct.swift; sourceTree = "<group>"; };
-		D406BA7D1FDF260B00647D7A /* CKCodable-5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CKCodable-5.swift"; path = "../../../../Downloads/CKCodable-5.swift"; sourceTree = "<group>"; };
+		447C58B51FD7368E00878DBC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		46424E8C1FD9C4D10065809C /* dashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashViewController.swift; sourceTree = "<group>"; };
+		46C070B01FE222DD00236CF0 /* CKCodable-5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CKCodable-5.swift"; sourceTree = "<group>"; };
+		46C070B21FE2247A00236CF0 /* ListingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingStruct.swift; sourceTree = "<group>"; };
+		46C070B41FE2393700236CF0 /* RentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentViewController.swift; sourceTree = "<group>"; };
+		70F3D5FC1FE06F29003F5CB5 /* ListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
+		70F3D6001FE090DA003F5CB5 /* SellerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerViewController.swift; sourceTree = "<group>"; };
 		D42961DE1FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParkingSpot+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D42961DF1FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParkingSpot+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D42961E01FB4E85B0032D322 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -40,7 +50,8 @@
 		D45850C51FB4DB3B00E80531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45850CB1FB4DB4400E80531 /* ParkingApp2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ParkingApp2.entitlements; sourceTree = "<group>"; };
 		D45850CD1FB4DB4600E80531 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		D47EF88E1FBE640900BD90D7 /* NewParkingSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewParkingSpotViewController.swift; sourceTree = "<group>"; };
+		EF348CC01FB4DEE5002F4563 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		EF4F9EC21FD090ED00DE4627 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +66,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D406BA7A1FDF259600647D7A /* Recovered References */ = {
+		70F3D6021FE090E2003F5CB5 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				46C070B01FE222DD00236CF0 /* CKCodable-5.swift */,
+				46424E8C1FD9C4D10065809C /* dashViewController.swift */,
+				70F3D6001FE090DA003F5CB5 /* SellerViewController.swift */,
+				46C070B41FE2393700236CF0 /* RentViewController.swift */,
 			);
-			name = "Recovered References";
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		70F3D6031FE09100003F5CB5 /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				447C58B51FD7368E00878DBC /* TableViewController.swift */,
+				70F3D5FC1FE06F29003F5CB5 /* ListingViewController.swift */,
+			);
+			path = Listing;
 			sourceTree = "<group>";
 		};
 		D45850AA1FB4DB3B00E80531 = {
@@ -83,7 +107,9 @@
 		D45850B51FB4DB3B00E80531 /* ParkingApp2 */ = {
 			isa = PBXGroup;
 			children = (
-				D406BA7D1FDF260B00647D7A /* CKCodable-5.swift */,
+				70F3D6031FE09100003F5CB5 /* Listing */,
+				70F3D6021FE090E2003F5CB5 /* Dashboard */,
+				EF4F9EC21FD090ED00DE4627 /* MapViewController.swift */,
 				D42961DE1FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift */,
 				D42961DF1FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift */,
 				D42961E01FB4E85B0032D322 /* User+CoreDataClass.swift */,
@@ -97,7 +123,8 @@
 				D45850C21FB4DB3B00E80531 /* LaunchScreen.storyboard */,
 				D45850C51FB4DB3B00E80531 /* Info.plist */,
 				D45850BD1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld */,
-				D406BA7B1FDF25B300647D7A /* ListingStruct.swift */,
+				EF348CC01FB4DEE5002F4563 /* model.swift */,
+				46C070B21FE2247A00236CF0 /* ListingStruct.swift */,
 			);
 			path = ParkingApp2;
 			sourceTree = "<group>";
@@ -190,12 +217,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D47EF88F1FBE640900BD90D7 /* NewParkingSpotViewController.swift in Sources */,
+				46424E8D1FD9C4D10065809C /* dashViewController.swift in Sources */,
 				D45850B91FB4DB3B00E80531 /* ViewController.swift in Sources */,
+				70F3D5FD1FE06F29003F5CB5 /* ListingViewController.swift in Sources */,
 				D45850B71FB4DB3B00E80531 /* AppDelegate.swift in Sources */,
 				D42961E51FB4E85B0032D322 /* User+CoreDataProperties.swift in Sources */,
+				447C58B61FD7368E00878DBC /* TableViewController.swift in Sources */,
 				D42961E21FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift in Sources */,
-				D406BA7C1FDF25B300647D7A /* ListingStruct.swift in Sources */,
+				46C070B11FE222DD00236CF0 /* CKCodable-5.swift in Sources */,
+				70F3D6011FE090DA003F5CB5 /* SellerViewController.swift in Sources */,
+				46C070B31FE2247A00236CF0 /* ListingStruct.swift in Sources */,
+				46C070B51FE2393700236CF0 /* RentViewController.swift in Sources */,
 				D45850BF1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld in Sources */,
 				D42961E31FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift in Sources */,
 				D42961E41FB4E85B0032D322 /* User+CoreDataClass.swift in Sources */,
