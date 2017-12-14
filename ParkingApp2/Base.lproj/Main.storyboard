@@ -612,22 +612,6 @@
             </objects>
             <point key="canvasLocation" x="1884" y="777"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="v1F-MP-1ix">
-            <objects>
-                <navigationController id="0Fg-ud-JH6" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cxn-rh-hJp">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ffn-2u-eSf" kind="show" id="Z6o-Nd-cjq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pr7-2l-f69" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2344" y="1150"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L81-H5-8Mp">
             <objects>
@@ -673,7 +657,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0gT-iC-pfQ"/>
                     <connections>
-                        <outlet property="mapView" destination="KRS-qd-ndc" id="sYt-DU-Cpf"/>
+                        <outlet property="mapView" destination="KRS-qd-ndc" id="vQi-Ij-J7A"/>
                         <segue destination="Oic-Za-rLi" kind="show" identifier="showDetail" id="XT0-Xr-sPp">
                             <nil key="action"/>
                         </segue>
