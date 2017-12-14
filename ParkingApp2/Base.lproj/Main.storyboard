@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Availability:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52F-vT-0Pk">
-                                <rect key="frame" x="20" y="74" width="81" height="21"/>
+                                <rect key="frame" x="20" y="74" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -109,12 +109,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlM-b8-NdL">
-                                <rect key="frame" x="152" y="74" width="114" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EJ-fz-5CL">
                                 <rect key="frame" x="112" y="424" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -143,19 +137,15 @@
                             <constraint firstItem="krO-2P-K2z" firstAttribute="top" secondItem="Lh9-fs-9de" secondAttribute="bottom" constant="10" id="Md3-WF-HWH"/>
                             <constraint firstItem="tD4-3z-yYf" firstAttribute="top" secondItem="6cR-b2-k0i" secondAttribute="bottom" constant="10" id="P1X-Tj-Kwc"/>
                             <constraint firstItem="Msd-jw-b4e" firstAttribute="top" secondItem="tD4-3z-yYf" secondAttribute="top" id="P5B-I3-AZj"/>
-                            <constraint firstItem="GlM-b8-NdL" firstAttribute="top" secondItem="52F-vT-0Pk" secondAttribute="top" id="Rco-Bb-dVs"/>
                             <constraint firstItem="52F-vT-0Pk" firstAttribute="top" secondItem="SaN-G2-6f5" secondAttribute="top" constant="10" id="SsM-Yh-1G1"/>
                             <constraint firstItem="3wL-sY-GHq" firstAttribute="top" secondItem="52F-vT-0Pk" secondAttribute="bottom" constant="40" id="TGI-zP-9SU"/>
                             <constraint firstItem="SaN-G2-6f5" firstAttribute="trailing" secondItem="tD4-3z-yYf" secondAttribute="trailing" constant="307" id="Ueu-Hx-PRU"/>
                             <constraint firstItem="1EJ-fz-5CL" firstAttribute="bottom" secondItem="Lh9-fs-9de" secondAttribute="bottom" id="Y2r-vw-3KG"/>
                             <constraint firstItem="52F-vT-0Pk" firstAttribute="leading" secondItem="SaN-G2-6f5" secondAttribute="leading" constant="20" id="ZGQ-gm-Crm"/>
                             <constraint firstItem="Lh9-fs-9de" firstAttribute="leading" secondItem="SaN-G2-6f5" secondAttribute="leading" constant="20" id="ZMx-0L-e58"/>
+                            <constraint firstItem="SaN-G2-6f5" firstAttribute="trailing" secondItem="52F-vT-0Pk" secondAttribute="trailing" constant="20" id="ajh-tR-Cnt"/>
                             <constraint firstItem="3wL-sY-GHq" firstAttribute="leading" secondItem="SaN-G2-6f5" secondAttribute="leading" constant="20" id="gYc-ad-7FI"/>
-                            <constraint firstItem="GlM-b8-NdL" firstAttribute="bottom" secondItem="52F-vT-0Pk" secondAttribute="bottom" id="h5b-PG-FtR"/>
-                            <constraint firstItem="GlM-b8-NdL" firstAttribute="leading" secondItem="52F-vT-0Pk" secondAttribute="trailing" constant="51" id="ihj-4B-BIB"/>
-                            <constraint firstItem="SaN-G2-6f5" firstAttribute="trailing" secondItem="52F-vT-0Pk" secondAttribute="trailing" constant="274" id="j8A-XX-bz1"/>
                             <constraint firstItem="6cR-b2-k0i" firstAttribute="top" secondItem="3wL-sY-GHq" secondAttribute="bottom" constant="40" id="jCx-hj-kMs"/>
-                            <constraint firstItem="SaN-G2-6f5" firstAttribute="trailing" secondItem="GlM-b8-NdL" secondAttribute="trailing" constant="109" id="jk9-8P-TAg"/>
                             <constraint firstItem="SaN-G2-6f5" firstAttribute="trailing" secondItem="krO-2P-K2z" secondAttribute="trailing" constant="258" id="kxq-Hd-nZl"/>
                             <constraint firstItem="tiz-h8-iXf" firstAttribute="leading" secondItem="SaN-G2-6f5" secondAttribute="leading" constant="67" id="pyT-aX-Ody"/>
                             <constraint firstItem="SaN-G2-6f5" firstAttribute="trailing" secondItem="1EJ-fz-5CL" secondAttribute="trailing" constant="113" id="qbn-49-ZAn"/>
@@ -169,8 +159,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Spot Name" id="Xx2-90-2kj"/>
                     <connections>
-                        <outlet property="availability" destination="GlM-b8-NdL" id="J0H-q5-lUN"/>
+                        <outlet property="availability" destination="52F-vT-0Pk" id="jd8-Wq-AEZ"/>
                         <outlet property="listingDescription" destination="tiz-h8-iXf" id="1aK-Nr-qMQ"/>
+                        <outlet property="navBar" destination="Xx2-90-2kj" id="Fgp-JA-2SX"/>
                         <outlet property="price" destination="Msd-jw-b4e" id="B79-z3-7hy"/>
                         <outlet property="size" destination="1EJ-fz-5CL" id="DFt-AQ-dup"/>
                     </connections>
