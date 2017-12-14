@@ -9,7 +9,7 @@
 import UIKit
 import CloudKit
 
-class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class NewParkingSpotViewController: UIViewController {
 
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var locationDescriptionField: UITextField!
@@ -51,10 +51,7 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
     }()
     
     var email: String = "dwdb79@mail.missouri.edu"
-    
-//    let publicDatabase = CKContainer.default().publicCloudDatabase
-//    let recordZone = CKRecordZone(zoneName: "ParkingZone")
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         sizePickerView.dataSource = self
@@ -107,23 +104,6 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return sizePickerData.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return sizePickerData[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
-    {
-        sizeTextField.text = sizePickerData[row]
-    }
-    
     @IBAction func changeDateStart(_ sender: UITextField) {
         startDateTextField.text = dateFormatter.string(from: startDatePicker.date)
         startDate = startDatePicker.date
@@ -135,12 +115,12 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
     }
     
     
-    @IBAction func saveSpot(_ sender: Any){
+    @IBAction func saveSpot(_ sender: UIBarButtonItem){
         savingView.isHidden = false
         let defaultAction = UIAlertAction(title: "Close", style: .default, handler: nil)
        
         guard let locationDescription = locationDescriptionField.text, !(locationDescriptionField.text?.isEmpty ?? true) else {
-            let alertController = UIAlertController(title: "Error", message: "Location description has not been filled out. Please fill out this field.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Missing Info", message: "Location description has not been filled out. Please fill out this field.", preferredStyle: .alert)
             
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
@@ -149,7 +129,7 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         }
         
         guard let price = priceTextField.text, !(priceTextField.text?.isEmpty ?? true) else {
-            let alertController = UIAlertController(title: "Error", message: "Price has not been set. Please set a price.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Missing Info", message: "Price has not been set. Please set a price.", preferredStyle: .alert)
             
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
@@ -158,7 +138,7 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         }
         
         guard let description = descriptionTextField.text, !(descriptionTextField.text?.isEmpty ?? true) else {
-            let alertController = UIAlertController(title: "Error", message: "Description has not been filled out. Please fill out this field.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Missing Info", message: "Description has not been filled out. Please fill out this field.", preferredStyle: .alert)
             
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
@@ -167,7 +147,7 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         }
         
         guard let startDate = startDate, !(startDateTextField.text?.isEmpty ?? true) else {
-            let alertController = UIAlertController(title: "Error", message: "Start time for the spot has not been set.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Missing Info", message: "Start date is missing. Please select a start time.", preferredStyle: .alert)
             
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
@@ -176,7 +156,7 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         }
         
         guard let endDate = endDate, !(endDateTextField.text?.isEmpty ?? true) else {
-            let alertController = UIAlertController(title: "Error", message: "End time for the spot has not been set.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Missing Info", message: "End date is missing. Please select an end time.", preferredStyle: .alert)
             
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
@@ -185,7 +165,7 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         }
         
         guard let carSize = sizeTextField.text, !(sizeTextField.text?.isEmpty ?? true) else {
-                let alertController = UIAlertController(title: "Error", message: "End time for the spot has not been set.", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Missing Info", message: "Car size is not filled out. Please fill out this field.", preferredStyle: .alert)
             
                 alertController.addAction(defaultAction)
                 self.present(alertController, animated: true, completion: nil)
@@ -194,7 +174,7 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         }
         
         guard let contactMethod = contactMethodTextField.text, !(descriptionTextField.text?.isEmpty ?? true) else {
-                let alertController = UIAlertController(title: "Error", message: "End time for the spot has not been set.", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Missing Info", message: "End time for the spot has not been set.", preferredStyle: .alert)
             
                 alertController.addAction(defaultAction)
                 self.present(alertController, animated: true, completion: nil)
@@ -230,16 +210,13 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
         let listing = ParkingStruct(cloudInformation: nil, rentorName: name, rentorEmail: email, startDate: startDate, endDate: endDate, locationDescription: locationDescription, price: price, carSize: carSize, description: description, contactMethod: contactMethod, renteeEmail: nil, renteeName: nil)
         
         cloud.save(listing) { (error) in
-            if let error = error {
+            if let _ = error {
                 let alertController = UIAlertController(title: "Opps", message: "It seems we were unable to save your listing. Please check your internet connection.", preferredStyle: .alert)
 
                 alertController.addAction(defaultAction)
                 self.present(alertController, animated: true, completion: nil)
-                print(error)
             } else {
-                print("Listing saved")
                 self.navigationController?.popViewController(animated: true)
-                self.savingView.isHidden = true
             }
         }
     }
@@ -258,7 +235,7 @@ extension NewParkingSpotViewController: UITextFieldDelegate {
         return true
     }
     
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         sizeTextField.text = sizePickerData.first
         
         if textField === startDateTextField {
@@ -267,34 +244,26 @@ extension NewParkingSpotViewController: UITextFieldDelegate {
             endDate = endDatePicker.date
             endDateTextField.text = dateFormatter.string(from: endDatePicker.date)
         }
-        
-        if textField === endDateTextField {
-            startDatePicker.minimumDate = Date()
-            endDatePicker.minimumDate = Date(timeInterval: 30.0 * 60.0, since: startDatePicker.date)
-            startDate = startDatePicker.date
-            startDateTextField.text = dateFormatter.string(from: startDatePicker.date)
-        }
-        
+        endDateTextField.isEnabled = true
         return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField === startDateTextField{
-            if let _startDate = startDate, let _endDate = endDate, (_startDate.addingTimeInterval(30.0 * 60.0) >= _endDate) {
-                endDatePicker.minimumDate = Date(timeInterval: 30.0 * 60.0, since: startDatePicker.date)
-                endDatePicker.date = startDatePicker.date.addingTimeInterval(30.0 * 60.0)
-                endDate = endDatePicker.date
-                endDateTextField.text = dateFormatter.string(from: endDatePicker.date)
-            }
-        }
     }
 }
 
-
-
-//struct User {
-//    var id: String
-//}
-//
-//NSPredicate(format: "id == %@", "moorest@missouri.edu")
-
+extension NewParkingSpotViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return sizePickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return sizePickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        sizeTextField.text = sizePickerData[row]
+    }
+}

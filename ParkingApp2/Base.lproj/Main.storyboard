@@ -24,7 +24,7 @@
                                     <navigationItem id="Voj-uW-0Jt">
                                         <barButtonItem key="rightBarButtonItem" title="Save" id="LjN-0F-ObX">
                                             <connections>
-                                                <action selector="saveSpot:" destination="fau-Mi-Th8" id="ZZ3-8U-1OR"/>
+                                                <action selector="saveSpot:" destination="fau-Mi-Th8" id="ixY-QH-3D6"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -106,7 +106,7 @@
                                 <rect key="frame" x="16" y="450.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Availability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wh5-Ob-bfo">
                                 <rect key="frame" x="16" y="490.5" width="89.5" height="20.5"/>
@@ -126,7 +126,7 @@
                                             <action selector="changeDateStart:" destination="fau-Mi-Th8" eventType="editingDidEnd" id="awl-Ka-8EA"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select To Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jex-jf-l5j">
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select To Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jex-jf-l5j">
                                         <rect key="frame" x="171.5" y="0.0" width="171.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
