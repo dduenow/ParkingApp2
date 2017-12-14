@@ -9,8 +9,11 @@
 import UIKit
 import CloudKit
 
+
 class SellerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var sellerTableview: UITableView!
+    var parkStruct: [ParkingStruct] = []
+
     
     var records = [CKRecord]()
     
@@ -51,15 +54,16 @@ class SellerViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loadData()
+//        loadData()
         let cloud = Cloud.defaultPublicDatabase()
         
-        cloud.retrieveObjects { (values: [Par], error) in
+        cloud.retrieveObjects { (values: [ParkingStruct], error) in
             if let error = error {
                 print(error)
             } else {
-                self.categories = values
-                self.categoriesTableView.reloadData()
+                self.parkStruct = values
+                self.sellerTableview.reloadData()
+                print("yay")
             }
         }
     }
@@ -82,15 +86,15 @@ class SellerViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.records.count
+        return self.parkStruct.count
     }
     
     //toDo: replace cell info with listing info
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let record = records[indexPath.row]
-        cell.textLabel?.text = record.object(forKey: "locationDescription") as? String
+        let record = parkStruct[indexPath.row]
+        cell.textLabel?.text = record.locationDescription
         
         return cell
     }
