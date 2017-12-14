@@ -230,7 +230,7 @@
             </objects>
             <point key="canvasLocation" x="190" y="2204"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Listings-->
         <scene sceneID="apt-wj-hwM">
             <objects>
                 <tableViewController id="zgR-mf-XpB" customClass="TableViewController" customModule="ParkingApp2" customModuleProvider="target" sceneMemberID="viewController">
@@ -268,7 +268,7 @@
                     <tabBarItem key="tabBarItem" title="" id="8Ii-fd-L4p">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" id="9kM-vp-RMU">
+                    <navigationItem key="navigationItem" title="Listings" id="9kM-vp-RMU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="F2e-Ob-22j">
                             <connections>
                                 <segue destination="fau-Mi-Th8" kind="show" id="5GQ-fK-k1S"/>
@@ -398,7 +398,7 @@
         <scene sceneID="pRu-CR-jYj">
             <objects>
                 <navigationController id="cvC-y3-jEr" userLabel="Listings" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="list" id="2gN-Fl-cWU">
+                    <tabBarItem key="tabBarItem" title="Listings" image="list" id="2gN-Fl-cWU">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9jN-vZ-QC8">
@@ -657,7 +657,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="0gT-iC-pfQ"/>
                     <connections>
-                        <outlet property="mapView" destination="KRS-qd-ndc" id="vQi-Ij-J7A"/>
                         <segue destination="Oic-Za-rLi" kind="show" identifier="showDetail" id="XT0-Xr-sPp">
                             <nil key="action"/>
                         </segue>
