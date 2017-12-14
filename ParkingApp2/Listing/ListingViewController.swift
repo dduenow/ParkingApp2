@@ -16,9 +16,12 @@ class ListingViewController: UIViewController {
     @IBOutlet weak var size: UILabel!
     @IBOutlet weak var listingDescription: UITextView!
     
-    var selectedValue: CKRecord = CKRecord(recordType: "ParkingSpot")
+    var selectedValue: CKRecord = CKRecord(recordType: "ParkingStruct")
     override func viewDidLoad() {
         super.viewDidLoad()
+        size.text? = selectedValue.value(forKey: "carSize") as! String
+        price.text? = selectedValue.value(forKey: "price") as! String
+        listingDescription.text? = selectedValue.value(forKey: "description") as! String
         //set attribute values to display
     }
 
