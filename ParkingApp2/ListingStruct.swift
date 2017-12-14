@@ -12,7 +12,7 @@ import CloudKit
 struct ParkingStruct : CloudKitCodable {
     let recordType = "ParkingStruct"
     var cloudInformation: CloudKitInformation?
-    var name: String
+    var rentorName: String
     var rentorEmail: String
     var startDate: Date
     var endDate: Date
@@ -22,6 +22,12 @@ struct ParkingStruct : CloudKitCodable {
     var description: String?
     var contactMethod: String
     var renteeEmail: String?
+    var renteeName: String?
+    
 }
+
+//extension ParkingStruct {
+//
+//}
 
     

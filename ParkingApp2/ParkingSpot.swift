@@ -16,6 +16,7 @@ struct Spot {
     let price: Double
     let size: String
     let detail: String
+    let spotImage: String
 //    let beginDate: Date
 //    let endDate: Date
 }

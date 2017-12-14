@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CloudKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
@@ -15,6 +16,31 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     let annotationIdentifier = "spot"
     var selectedAnnotation: SpotPointAnnotation?
+    
+    var records = [CKRecord]()
+    
+    let publicDatabase = CKContainer.default().publicCloudDatabase
+    let recordZone = CKRecordZone(zoneName: "ParkingZone")
+    
+    func loadData() {
+        let query = CKQuery(recordType: "ParkingStruct", predicate: NSPredicate(value: true))
+        publicDatabase.perform(query, inZoneWith: nil) { (ParkingStruct, error) in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print(error)
+                }
+                else{
+                    self.records = ParkingStruct ?? []
+                    self.records = self.records.reversed()
+//                    self.MapViewController.reloadData()
+                }
+            }
+        }
+    }
+    
+    var firstName: String?
+    var lastName: String?
+    var email: String = "aavr56@mail.missouri.edu"
     
     let centerLatitude = 40.00
     let centerLongitude = -90.00
@@ -26,19 +52,19 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var spots: [Spot] = [
         Spot(latitude: 38.946336, longitude: -92.330565,
                  title: "Test1", subtitle: "University of Missouri",
-                 price: 1.00, size: "Two normal vehicles", detail: "normal spot that can fit two vehiclesasdfasdfasdfal;sdkfjasl;dkfjals;dkfjas;ldkfja;ldskfja;"),
+                 price: 1.00, size: "Two normal vehicles", detail: "normal spot that can fit two vehiclesasdfasdfasdfal;sdkfjasl;dkfjals;dkfjas;ldkfja;ldskfja;", spotImage: "park1"),
         Spot(latitude: 38.945176, longitude: -92.328838,
                  title: "T2", subtitle: "University of Missouri",
-                 price: 1.00, size: "One spaceship", detail: "parking spot available for one spaceship"),
+                 price: 1.00, size: "One spaceship", detail: "parking spot available for one spaceship", spotImage: "park2"),
         Spot(latitude: 38.947889, longitude: -92.329506,
                  title: "T3", subtitle: "University of Missouri",
-                 price: 1.00, size: "1 vehicle", detail: "extra spot available at my house"),
+                 price: 1.00, size: "1 vehicle", detail: "extra spot available at my house", spotImage: "park3"),
         Spot(latitude: 38.948689, longitude: -92.327841,
                  title: "T4", subtitle: "Columbia, MO",
-                 price: 1.00, size: "up to a large truck", detail: "enough room for a large vehicle"),
+                 price: 1.00, size: "up to a large truck", detail: "enough room for a large vehicle", spotImage: "park4"),
         Spot(latitude: 38.950132, longitude: -92.332251,
                  title: "T5", subtitle: "Columbia, Missouri",
-                 price: 1.00, size: "one limo", detail: "got a spot for a limo here")
+                 price: 1.00, size: "one limo", detail: "got a spot for a limo here", spotImage: "park5")
     ]
 
     override func viewDidLoad() {
@@ -63,6 +89,16 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             point.subtitle = spot.subtitle
             mapView.addAnnotation(point)
         }
+        
+        
+        Cloud.defaultPublicDatabase().userInformation { (user, error) in
+            self.firstName = user?.firstName
+            self.firstName? += " "
+            self.firstName? += (user?.lastName)!
+            self.lastName = user?.lastName
+        }
+        
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {

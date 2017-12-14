@@ -18,8 +18,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var sizeLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var rentButton: UIButton!
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,13 +28,18 @@ class DetailViewController: UIViewController {
             sizeLabel.text = spot.size
             sizeLabel.lineBreakMode = .byWordWrapping
             sizeLabel.numberOfLines = 0
-            sizeLabel.sizeToFit()
+//            sizeLabel.sizeToFit()
             detailLabel.text = spot.detail
             detailLabel.lineBreakMode = .byWordWrapping
             detailLabel.numberOfLines = 0
-            detailLabel.sizeToFit()
-
+//            detailLabel.sizeToFit()
+            
+            let parkImage = spot.spotImage
+            let initImage = UIImage(named: parkImage)
+            image.image = initImage
         }
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -43,7 +47,20 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
+    @IBAction func rent(_ sender: Any) {
+        let alertController = UIAlertController(title: "Opps", message: "Are you sure you want to rent this spot?", preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+        }))
+        self.present(alertController, animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+    }
+    
 
     /*
     // MARK: - Navigation

@@ -149,7 +149,7 @@ class NewParkingSpotViewController: UIViewController, UIPickerViewDataSource, UI
     
     @IBAction func saveSpot(_ sender: Any){
         
-        let listing = ParkingStruct(cloudInformation: nil, name: firstName!, rentorEmail: email, startDate: startDate!, endDate: endDate!, locationDescription: locationDescriptionField.text!, price: priceTextField.text! , carSize: sizeTextField.text!, description: descriptionTextField.text!, contactMethod: contactMethodTextField.text!, renteeEmail: nil)
+        let listing = ParkingStruct(cloudInformation: nil, rentorName: firstName!, rentorEmail: email, startDate: startDate!, endDate: endDate!, locationDescription: locationDescriptionField.text!, price: priceTextField.text! , carSize: sizeTextField.text!, description: descriptionTextField.text!, contactMethod: contactMethodTextField.text!, renteeEmail: nil, renteeName: nil )
         
         guard let firstName = firstName, !firstName.isEmpty else {
             // raise error
