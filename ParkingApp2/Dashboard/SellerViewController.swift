@@ -63,7 +63,6 @@ class SellerViewController: UIViewController, UITableViewDelegate, UITableViewDa
             } else {
                 self.parkStruct = values
                 self.sellerTableview.reloadData()
-                print("yay")
             }
         }
     }
