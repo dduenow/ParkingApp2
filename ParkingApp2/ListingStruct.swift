@@ -19,15 +19,12 @@ struct ParkingStruct : CloudKitCodable {
     var locationDescription: String
     var price: String
     var carSize: String
-    var description: String?
+    var description: String
     var contactMethod: String
     var renteeEmail: String?
     var renteeName: String?
-    
 }
 
-//extension ParkingStruct {
-//
-//}
 
-    
+
+
