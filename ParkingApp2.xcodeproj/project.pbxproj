@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		447C58B61FD7368E00878DBC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C58B51FD7368E00878DBC /* TableViewController.swift */; };
 		46424E8D1FD9C4D10065809C /* dashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46424E8C1FD9C4D10065809C /* dashViewController.swift */; };
+		46C070B11FE222DD00236CF0 /* CKCodable-5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C070B01FE222DD00236CF0 /* CKCodable-5.swift */; };
 		70F3D5FD1FE06F29003F5CB5 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D5FC1FE06F29003F5CB5 /* ListingViewController.swift */; };
 		70F3D5FF1FE090CC003F5CB5 /* RenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D5FE1FE090CC003F5CB5 /* RenterViewController.swift */; };
 		70F3D6011FE090DA003F5CB5 /* SellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D6001FE090DA003F5CB5 /* SellerViewController.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		447C58B51FD7368E00878DBC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		46424E8C1FD9C4D10065809C /* dashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashViewController.swift; sourceTree = "<group>"; };
+		46C070B01FE222DD00236CF0 /* CKCodable-5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CKCodable-5.swift"; sourceTree = "<group>"; };
 		70F3D5FC1FE06F29003F5CB5 /* ListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		70F3D5FE1FE090CC003F5CB5 /* RenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenterViewController.swift; sourceTree = "<group>"; };
 		70F3D6001FE090DA003F5CB5 /* SellerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		70F3D6021FE090E2003F5CB5 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				46C070B01FE222DD00236CF0 /* CKCodable-5.swift */,
 				46424E8C1FD9C4D10065809C /* dashViewController.swift */,
 				70F3D6001FE090DA003F5CB5 /* SellerViewController.swift */,
 				70F3D5FE1FE090CC003F5CB5 /* RenterViewController.swift */,
@@ -217,6 +220,7 @@
 				D42961E51FB4E85B0032D322 /* User+CoreDataProperties.swift in Sources */,
 				447C58B61FD7368E00878DBC /* TableViewController.swift in Sources */,
 				D42961E21FB4E85B0032D322 /* ParkingSpot+CoreDataClass.swift in Sources */,
+				46C070B11FE222DD00236CF0 /* CKCodable-5.swift in Sources */,
 				70F3D6011FE090DA003F5CB5 /* SellerViewController.swift in Sources */,
 				D45850BF1FB4DB3B00E80531 /* ParkingApp2.xcdatamodeld in Sources */,
 				D42961E31FB4E85B0032D322 /* ParkingSpot+CoreDataProperties.swift in Sources */,
